@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - XByte Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navegação principal">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/logo.png" alt="XByte Studios Logo" class="logo" width="40" height="40">
+                    <span class="logo-text">XByte Studios</span>
+                </div>
+                <div class="search-container" role="search">
+                    <input type="search" id="searchInput" class="search-input" placeholder="Buscar placas-mãe..." aria-label="Buscar produtos">
+                    <button class="search-btn" onclick="performSearch()" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html#hero" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="index.html#products" class="nav-link" role="menuitem">Produtos</a></li>
+                    <li role="none"><a href="index.html#payment" class="nav-link" role="menuitem">Pagamento</a></li>
+                    <li role="none"><a href="about.html" class="nav-link active" role="menuitem">Sobre Nós</a></li>
+                    <li role="none"><a href="quantum-ai.html" class="nav-link" role="menuitem">Quantum & IA</a></li>
+                    <li role="none">
+                        <a href="#" class="nav-link cart-link" onclick="toggleCart()" role="menuitem" aria-label="Carrinho de compras">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cartCount" class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0" onclick="toggleMobileMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="about-us" class="about-us-page section-padding">
+            <div class="container">
+                <h1 class="section-title">Sobre a XByte Studios</h1>
+                <p class="section-subtitle">Nossa história, missão e compromisso com a inovação.</p>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Nossa Missão</h2>
+                        <p>Na XByte Studios, nossa missão é impulsionar a inovação tecnológica, fornecendo as melhores placas-mãe Gigabyte para entusiastas, gamers e profissionais. Acreditamos que a base de um sistema de alta performance começa com uma placa-mãe robusta e confiável, e é por isso que nos dedicamos a oferecer produtos originais, com garantia oficial e suporte técnico especializado.</p>
+
+                        <h2>Nossa História</h2>
+                        <p>Fundada em 2020, a XByte Studios nasceu da paixão por hardware e da visão de criar um ecossistema onde a performance e a inovação se encontram. Começamos como um pequeno grupo de entusiastas e rapidamente crescemos, tornando-nos um dos principais revendedores de placas-mãe Gigabyte no mercado. Ao longo dos anos, construímos uma reputação de excelência, baseada na qualidade dos nossos produtos e no atendimento impecável aos nossos clientes.</p>
+
+                        <h2>Compromisso com a Qualidade</h2>
+                        <p>Trabalhamos apenas com produtos Gigabyte originais, garantindo que cada placa-mãe que você adquire da XByte Studios seja autêntica e coberta pela garantia do fabricante. Nosso rigoroso controle de qualidade assegura que você receba apenas o melhor, pronto para elevar o desempenho do seu sistema.</p>
+
+                        <h2>Suporte Especializado</h2>
+                        <p>Entendemos que a tecnologia pode ser complexa. Por isso, nossa equipe de suporte técnico é composta por especialistas prontos para auxiliar em todas as etapas, desde a escolha da placa-mãe ideal até a configuração e solução de problemas. Sua satisfação é a nossa prioridade.</p>
+
+                        <h2>Visão de Futuro</h2>
+                        <p>Estamos sempre olhando para o futuro, acompanhando as últimas tendências e inovações no mundo da tecnologia. Nosso objetivo é continuar sendo a sua fonte confiável para hardware de ponta, expandindo nosso portfólio e aprimorando continuamente a experiência de compra.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/motherboard-hero.jpg" alt="Equipe XByte Studios" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h2 class="section-title-small">Nossa Equipe</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Membro da Equipe 1">
+                            <h3>Lucas Fabiano</h3>
+                            <p>CEO & Fundador</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Membro da Equipe 2">
+                            <h3>Guilherme Madeira</h3>
+                            <p>Diretor de Operações</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Membro da Equipe 3">
+                            <h3>Igor Palau</h3>
+                            <p>Líder de Suporte Técnico</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Membro da Equipe 1">
+                            <h3>João Pedro</h3>
+                            <p>Pesquisador Geral</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Membro da Equipe 1">
+                            <h3>Gustavo Samuel</h3>
+                            <p>Designer UX/UI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-info-about">
+                    <h2 class="section-title-small">Entre em Contato</h2>
+                    <p>Tem alguma pergunta ou gostaria de saber mais sobre a XByte Studios? Entre em contato conosco!</p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-info">
+                                <h4>E-mail</h4>
+                                <p>xbytestudiosoficial@gamail.com</p>
+                                <button class="contact-btn" onclick="openEmailSupport()">Enviar E-mail</button>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-info">
+                                <h4>Telefone</h4>
+                                <p>(11) 3456-7890</p>
+                                <button class="contact-btn" onclick="callSupport()">Ligar Agora</button>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-comments"></i>
+                            <div class="contact-info">
+                                <h4>Chat Online</h4>
+                                <p>Disponível no horário comercial</p>
+                                <button class="contact-btn" onclick="openChat()">Iniciar Chat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="XByte Studios Logo" class="footer-logo-img" width="40" height="40">
+                    <span>XByte Studios</span>
+                </div>
+                <p class="footer-text">Especialistas em placas-mãe Gigabyte. Qualidade, confiança e suporte técnico especializado.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="security-badges">
+                    <span class="badge">SSL Seguro</span>
+                    <span class="badge">Loja Verificada</span>
+                    <span class="badge">Garantia Oficial</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 XByte Studios. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Carrinho de Compras</h3>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Fechar carrinho">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Seu carrinho está vazio</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: R$ <span id="cartTotal">0,00</span></div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                <i class="fas fa-credit-card"></i>
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" aria-label="Fechar modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div id="comparisonModal" class="modal" role="dialog" aria-labelledby="comparison-title" aria-hidden="true">
+        <div class="modal-content comparison-content">
+            <span class="close" onclick="closeComparisonModal()" aria-label="Fechar comparação">&times;</span>
+            <div id="comparisonContent"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
