@@ -1,339 +1,594 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="XByte Studios - Loja especializada em placas-mãe Gigabyte. Produtos originais, garantia oficial, frete grátis e suporte técnico especializado.">
-    <meta name="keywords" content="placa-mãe, gigabyte, hardware, pc gamer, motherboard, lga 1700, am5, am4">
-    <title>XByte Studios - Placas-Mãe Gigabyte | Loja Especializada em Hardware</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+  <title>XBYTE Games Studios – Estúdio de Jogos Indie</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="XBYTE Games Studios – Estúdio indie brasileiro criando experiências imersivas. Metroidvania, FPS e aventuras narrativas desenvolvidos com paixão e tecnologia.">
+  <meta name="author" content="XBYTE Games Studios">
+  <meta name="keywords" content="Jogos, Estúdio, Indie, Metroidvania, FPS, Horror, Game Development, Gigabyte, Suporte Técnico">
+  <link rel="icon" type="image/png" href="assets/images/xbyte_logo.png">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Skip Link para Acessibilidade -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-    
-    <!-- Header -->
-    <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Navegação principal">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="assets/logo.png" alt="XByte Studios Logo" class="logo" width="40" height="40">
-                    <span class="logo-text">XByte Studios</span>
-                </div>
-                
-                <!-- Search -->
-                <div class="search-container" role="search">
-                    <input type="search" id="searchInput" class="search-input" placeholder="Buscar placas-mãe..." aria-label="Buscar produtos">
-                    <button class="search-btn" onclick="performSearch()" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-                
-                <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="#hero" class="nav-link" role="menuitem">Início</a></li>
-                    <li role="none"><a href="#products" class="nav-link" role="menuitem">Produtos</a></li>
-                    <li role="none"><a href="#payment" class="nav-link" role="menuitem">Pagamento</a></li>
-                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">Sobre Nós</a></li>
-                    <li role="none"><a href="quantum-ai.html" class="nav-link" role="menuitem">Quantum & IA</a></li>
-                    <li role="none"><a href="#support" class="nav-link" role="menuitem">Suporte</a></li>
-                    <li role="none">
-                        <a href="#" class="nav-link cart-link" onclick="toggleCart()" role="menuitem" aria-label="Carrinho de compras">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span id="cartCount" class="cart-count" style="display: none;">0</span>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0" onclick="toggleMobileMenu()">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="hero" class="hero" role="banner">
-            <div class="hero-badge" aria-label="Oferta especial">Mais Vendida</div>
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">XByte Studios</h1>
-                    <h2 class="hero-subtitle">Onde a performance encontra a inovação</h2>
-                    <p class="hero-description">
-                        Potencialize seu PC com as melhores placas-mãe Gigabyte. 
-                        Produtos originais, suporte especializado e garantia total.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="cta-button" onclick="scrollToSection('products')" aria-label="Ver produtos disponíveis">
-                            <i class="fas fa-rocket"></i>
-                            Explorar Produtos
-                        </button>
-                        <a href="#support" class="cta-button-secondary" aria-label="Falar com especialista">
-                            <i class="fas fa-headset"></i>
-                            Falar com Especialista
-                        </a>
-                    </div>
-                    <div class="trust-indicators">
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Produtos Originais</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-shipping-fast"></i>
-                            <span>Frete Grátis</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Garantia Oficial</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="motherboard-showcase">
-                        <img src="assets/logo.png" alt="Placa-mãe Gigabyte Z790 AORUS MASTER" class="hero-motherboard" loading="eager" width="300" height="300">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section id="products" class="products" role="main">
-            <div class="container">
-                <h2 class="section-title">Nossas Placas-Mãe</h2>
-                <p class="section-subtitle">Escolha a placa-mãe perfeita para suas necessidades</p>
-                
-                <!-- Filters -->
-                <div class="filters-container">
-                    <div class="category-filters" role="group" aria-label="Filtros de categoria">
-                        <button class="filter-btn active" data-category="all" aria-pressed="true" onclick="filterProducts('all')">Todas</button>
-                        <button class="filter-btn" data-category="LGA 1700" aria-pressed="false" onclick="filterProducts('LGA 1700')">Intel LGA 1700</button>
-                        <button class="filter-btn" data-category="AM5" aria-pressed="false" onclick="filterProducts('AM5')">AMD AM5</button>
-                        <button class="filter-btn" data-category="AM4" aria-pressed="false" onclick="filterProducts('AM4')">AMD AM4</button>
-                        <button class="filter-btn" data-category="LGA 1200" aria-pressed="false" onclick="filterProducts('LGA 1200')">Intel LGA 1200</button>
-                    </div>
-                    
-                    <div class="advanced-filters" role="group" aria-label="Filtros avançados">
-                        <select id="socketFilter" class="filter-select" aria-label="Filtrar por socket" onchange="applyFilters()">
-                            <option value="">Todos os Sockets</option>
-                            <option value="LGA 1700">Intel LGA 1700</option>
-                            <option value="AM5">AMD AM5</option>
-                            <option value="AM4">AMD AM4</option>
-                            <option value="LGA 1200">Intel LGA 1200</option>
-                        </select>
-                        
-                        <select id="priceFilter" class="filter-select" aria-label="Filtrar por preço" onchange="applyFilters()">
-                            <option value="">Todas as Faixas</option>
-                            <option value="0-1000">Até R$ 1.000</option>
-                            <option value="1000-2000">R$ 1.000 - R$ 2.000</option>
-                            <option value="2000-3000">R$ 2.000 - R$ 3.000</option>
-                            <option value="3000+">Acima de R$ 3.000</option>
-                        </select>
-                        
-                        <button class="compare-btn" onclick="toggleCompareMode()" aria-label="Ativar modo de comparação">
-                            <i class="fas fa-balance-scale"></i>
-                            Comparar
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Products Grid -->
-                <div class="products-grid" role="list" id="productsGrid">
-                    <!-- Os produtos serão carregados dinamicamente via JavaScript -->
-                </div>
-
-                <!-- Comparison Panel -->
-                <div id="comparePanel" class="compare-panel">
-                    <div class="compare-header">
-                        <h3>Comparar Produtos</h3>
-                        <button class="clear-btn" onclick="clearComparison()">Limpar</button>
-                    </div>
-                    <div id="compareProducts" class="compare-products"></div>
-                    <button class="compare-action-btn" onclick="showComparison()">Comparar Selecionados</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Payment Section -->
-        <section id="payment" class="payment">
-            <div class="container">
-                <h2 class="section-title">Formas de Pagamento</h2>
-                <div class="payment-grid">
-                    <div class="payment-card">
-                        <i class="fas fa-credit-card"></i>
-                        <h3>Cartão de Crédito</h3>
-                        <p>Visa, MasterCard, American Express, Elo</p>
-                        <div class="payment-benefit">Até 12x sem juros</div>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fas fa-barcode"></i>
-                        <h3>Boleto Bancário</h3>
-                        <p>Pagamento à vista</p>
-                        <div class="payment-benefit">5% de desconto</div>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fas fa-qrcode"></i>
-                        <h3>PIX</h3>
-                        <p>Pagamento instantâneo</p>
-                        <div class="payment-benefit">7% de desconto</div>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fas fa-university"></i>
-                        <h3>Transferência</h3>
-                        <p>Principais bancos</p>
-                        <div class="payment-benefit">Seguro e rápido</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Support Section -->
-        <section id="support" class="support">
-            <div class="container">
-                <h2 class="section-title">Suporte Técnico</h2>
-                <div class="support-content">
-                    <div class="support-info">
-                        <h3>Precisa de ajuda?</h3>
-                        <p>Nossa equipe de suporte técnico especializado está pronta para atendê-lo!</p>
-                        <div class="support-hours">
-                            <i class="fas fa-clock"></i>
-                            <span>Segunda a Sexta-feira, das 9h às 18h</span>
-                        </div>
-                        <div class="support-services">
-                            <h4>Oferecemos suporte para:</h4>
-                            <ul>
-                                <li>Dúvidas sobre produtos e compatibilidade</li>
-                                <li>Auxílio na instalação e configuração inicial</li>
-                                <li>Problemas técnicos e RMA</li>
-                                <li>Informações sobre garantia</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-info">
-                                <h4>E-mail</h4>
-                                <p>xbytestudiosoficial@gmail.com</p>
-                                <button class="contact-btn" onclick="openEmailSupport()">Enviar E-mail</button>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fas fa-phone"></i>
-                            <div class="contact-info">
-                                <h4>Telefone</h4>
-                                <p>(11) 3456-7890</p>
-                                <button class="contact-btn" onclick="callSupport()">Ligar Agora</button>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fas fa-comments"></i>
-                            <div class="contact-info">
-                                <h4>Chat Online</h4>
-                                <p>Disponível no horário comercial</p>
-                                <button class="contact-btn" onclick="openChat()">Iniciar Chat</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-            <!-- Video Section -->
-        <section id="company-video" class="company-video">
-            <div class="container">
-                <h2 class="section-title">Conheça a XByte Studios</h2>
-                <p class="section-subtitle">Assista ao nosso vídeo institucional e saiba mais sobre nossa paixão por tecnologia.</p>
-                <div class="video-wrapper">
-                    <video controls preload="metadata" poster="assets/motherboard-hero.jpg">
-                        <source src="assets/xbyte_movie.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="XByte Studios Logo" class="footer-logo-img" width="40" height="40">
-                    <span>XByte Studios</span>
-                </div>
-                <p class="footer-text">Especialistas em placas-mãe Gigabyte. Qualidade, confiança e suporte técnico especializado.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                <div class="security-badges">
-                    <span class="badge">SSL Seguro</span>
-                    <span class="badge">Loja Verificada</span>
-                    <span class="badge">Garantia Oficial</span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 XByte Studios. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cart Sidebar -->
-    <div id="cartSidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h3>Carrinho de Compras</h3>
-            <button class="close-cart" onclick="toggleCart()" aria-label="Fechar carrinho">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div id="cartItems" class="cart-items">
-            <div class="empty-cart">
-                <i class="fas fa-shopping-cart"></i>
-                <p>Seu carrinho está vazio</p>
-            </div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">Total: R$ <span id="cartTotal">0,00</span></div>
-            <button class="checkout-btn" onclick="proceedToCheckout()">
-                <i class="fas fa-credit-card"></i>
-                Finalizar Compra
-            </button>
-        </div>
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
+      </div>
+      <div class="loading-label">XBYTE GAMES STUDIOS</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <p class="loading-text">Iniciando sistemas...</p>
     </div>
+  </div>
 
-    <!-- Modals -->
-    <div id="productModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()" aria-label="Fechar modal">&times;</span>
-            <div id="modalContent"></div>
-        </div>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
+        <span>XBYTE</span>
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home"     class="nav-link">Início</a>
+        <a href="#sobre"    class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#jogos"    class="nav-link">Jogos</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#contato"  class="nav-link">Contato</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <div id="comparisonModal" class="modal" role="dialog" aria-labelledby="comparison-title" aria-hidden="true">
-        <div class="modal-content comparison-content">
-            <span class="close" onclick="closeComparisonModal()" aria-label="Fechar comparação">&times;</span>
-            <div id="comparisonContent"></div>
-        </div>
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    <div class="hero-logo-watermark">
+      <img src="assets/images/xbyte_logo.png" alt="" aria-hidden="true"/>
     </div>
+    <div class="hero-scanlines" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Indie Game Studio &nbsp;·&nbsp; Est. 2019 &nbsp;·&nbsp; Rio de Janeiro
+        <span class="eyebrow-dot"></span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">XBYTE</span>
+        <span class="title-line title-accent">GAMES STUDIOS</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-typing-target">Criando experiências imersivas que transcendem realidades</p>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn btn-primary">
+          <i class="fas fa-gamepad"></i>
+          Nossos Jogos
+        </a>
+        <a href="#sobre" class="btn btn-secondary">
+          <i class="fas fa-info-circle"></i>
+          Conheça-nos
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Explorar</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="sobre" class="about scroll-reveal">
+    <canvas id="about-topo-canvas" class="about-topo-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Pioneiros em Experiências Digitais</h3>
+          <p>
+            A XBYTE Games Studios nasceu da paixão por criar mundos digitais únicos e envolventes.
+            Somos um estúdio indie brasileiro especializado em jogos narrativos, com foco especial
+            em Metroidvanias atmosféricos, FPS psicológicos e aventuras góticas.
+          </p>
+          <p>
+            Nossa missão é transcender os limites entre realidade e ficção, criando experiências
+            que permanecem na memória dos jogadores muito depois dos créditos finais. Cada projeto
+            é uma jornada cuidadosamente elaborada, onde cada pixel conta uma história.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Projetos em Desenvolvimento</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Anos de Experiência</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Paixão por Jogos</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="about-image-frame">
+            <img src="assets/images/gaming_setup.jpg" alt="Setup de desenvolvimento da XBYTE" />
+          </div>
+          <div class="about-image-accent" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projetos" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos Projetos</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Mundos criados com paixão, pixel a pixel</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card scroll-reveal">
+          <div class="project-image">
+            <img src="assets/images/gothic_knight.jpg" alt="THE Knight Nocturne" loading="lazy"/>
+            <div class="project-status status-dev">Em Desenvolvimento</div>
+            <div class="project-overlay">
+              <div class="project-overlay-content">
+                <h3>THE Knight Nocturne</h3>
+                <p>Aventura narrativa em ruínas góticas</p>
+                <div class="project-tags">
+                  <span class="tag">Aventura</span>
+                  <span class="tag">Narrativo</span>
+                  <span class="tag">Gótico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>THE Knight Nocturne</h3>
+            <p>Uma jornada sombria através de ruínas góticas, onde cada sombra esconde segredos ancestrais e cada passo revela mistérios há muito esquecidos.</p>
+            <div class="project-features">
+              <span><i class="fas fa-chess-knight"></i> Combate tático</span>
+              <span><i class="fas fa-book"></i> Narrativa profunda</span>
+              <span><i class="fas fa-eye"></i> Atmosfera única</span>
+            </div>
+            <a href="#contato" class="btn btn-project">
+              <i class="fas fa-info-circle"></i> Saiba Mais
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card scroll-reveal">
+          <div class="project-image">
+            <img src="assets/images/metroidvania_game.png" alt="THE Flightless" loading="lazy"/>
+            <div class="project-status status-dev">Em Desenvolvimento</div>
+            <div class="project-overlay">
+              <div class="project-overlay-content">
+                <h3>THE Flightless</h3>
+                <p>Plataforma interconectada com mecânicas invertidas</p>
+                <div class="project-tags">
+                  <span class="tag">Metroidvania</span>
+                  <span class="tag">Plataforma</span>
+                  <span class="tag">Exploração</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>THE Flightless</h3>
+            <p>Um Metroidvania inovador onde a exploração vertical desafia as convenções, criando um mundo interconectado de possibilidades infinitas.</p>
+            <div class="project-features">
+              <span><i class="fas fa-arrow-up"></i> Exploração vertical</span>
+              <span><i class="fas fa-puzzle-piece"></i> Mecânicas únicas</span>
+              <span><i class="fas fa-map"></i> Mundo interconectado</span>
+            </div>
+            <a href="#contato" class="btn btn-project">
+              <i class="fas fa-info-circle"></i> Saiba Mais
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card scroll-reveal">
+          <div class="project-image">
+            <img src="assets/images/horror_fps.png" alt="THE GOD Echo of Void" loading="lazy"/>
+            <div class="project-status status-concept">Conceito</div>
+            <div class="project-overlay">
+              <div class="project-overlay-content">
+                <h3>THE GOD Echo of Void</h3>
+                <p>FPS psicológico com horrores dimensionais</p>
+                <div class="project-tags">
+                  <span class="tag">FPS</span>
+                  <span class="tag">Horror</span>
+                  <span class="tag">Psicológico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>THE GOD Echo of Void</h3>
+            <p>Uma experiência FPS que desafia a percepção da realidade, navegando por labirintos mentais onde o horror psicológico encontra a ação intensa.</p>
+            <div class="project-features">
+              <span><i class="fas fa-ghost"></i> Horror psicológico</span>
+              <span><i class="fas fa-brain"></i> Narrativa mental</span>
+              <span><i class="fas fa-crosshairs"></i> Ação intensa</span>
+            </div>
+            <a href="#contato" class="btn btn-project">
+              <i class="fas fa-info-circle"></i> Saiba Mais
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAMES SECTION ===== -->
+  <section id="jogos" class="games scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Jogos Disponíveis</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Experimente nossos jogos desenvolvidos com paixão e criatividade</p>
+      </div>
+      <div class="games-grid single-game">
+
+        <div class="game-card scroll-reveal">
+          <div class="game-image">
+            <div class="game-thumbnail game-thumb-1">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="game-badge badge-available">Disponível</div>
+            <div class="game-overlay">
+              <a href="games/memoria/index.html" class="btn btn-primary" target="_blank">
+                <i class="fas fa-play"></i> Jogar Agora
+              </a>
+            </div>
+          </div>
+          <div class="game-content">
+            <h3>Jogo da Memória</h3>
+            <p class="game-subtitle">Personagens Históricos</p>
+            <p>Jogo clássico de memória com toque educativo. Descubra e combine pares de personagens históricos enquanto aprende sobre suas contribuições para a humanidade.</p>
+            <div class="game-features">
+              <span><i class="fas fa-graduation-cap"></i> Educativo</span>
+              <span><i class="fas fa-brain"></i> Memória</span>
+              <span><i class="fas fa-history"></i> Histórico</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="servicos" class="services scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Desenvolvimento de Jogos</h3>
+          <p>Criação completa de jogos indie com foco em narrativa, atmosfera e jogabilidade inovadora. Especializados em Metroidvania e FPS.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Gamificação</h3>
+          <p>Transformamos experiências comuns em aventuras envolventes através de elementos de jogos aplicados a diferentes contextos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Trilhas Sonoras</h3>
+          <p>Composição e produção de trilhas sonoras imersivas que complementam perfeitamente a atmosfera dos seus projetos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-vr-cardboard"></i>
+          </div>
+          <h3>Realidade Virtual</h3>
+          <p>Desenvolvimento de experiências em VR que transportam os usuários para mundos completamente novos e interativos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Suporte Técnico</h3>
+          <p>Parceria com Gigabyte oferecendo suporte técnico especializado, atualizações de software e manutenção de PCs e notebooks.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-laptop"></i>
+          </div>
+          <h3>Consultoria Gaming</h3>
+          <p>Consultoria especializada em hardware gaming, otimização de performance e configuração de setups profissionais.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">O Que Dizem Sobre Nós</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="testimonials-slider">
+
+        <div class="testimonial-card active">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <div class="testimonial-content">
+            <p>"A XBYTE criou uma experiência única para nosso projeto. A atenção aos detalhes e a paixão pelo que fazem é evidente em cada aspecto do trabalho."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info">
+              <h4>Maria Silva</h4>
+              <span>CEO, TechStart</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <div class="testimonial-content">
+            <p>"O suporte técnico da XBYTE é excepcional. Resolveram todos os nossos problemas de hardware gaming com profissionalismo e rapidez."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info">
+              <h4>João Santos</h4>
+              <span>Streamer Profissional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <div class="testimonial-content">
+            <p>"A trilha sonora criada pela XBYTE elevou nosso projeto a um nível completamente novo. Simplesmente incrível!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info">
+              <h4>Ana Costa</h4>
+              <span>Diretora Criativa</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonial-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contato" class="contact scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-content">
+
+        <div class="contact-info">
+          <h3>Vamos Criar Algo Incrível Juntos</h3>
+          <p>Pronto para transformar sua ideia em realidade? Entre em contato e vamos discutir como podemos ajudar seu projeto a alcançar o próximo nível.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>contato@xbytegamesstudios.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Telefone</h4>
+                <p>(21) 96450-8776</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Localização</h4>
+                <p>Rio de Janeiro, RJ, Brasil</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/XBYTE.Games" target="_blank" aria-label="Instagram" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/XBYTEStudios" target="_blank" aria-label="Twitter" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/XBYTE.studiios" target="_blank" aria-label="LinkedIn" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/XBYTEStudios" target="_blank" aria-label="GitHub" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">Selecione um assunto</option>
+              <option value="desenvolvimento">Desenvolvimento de Jogos</option>
+              <option value="suporte">Suporte Técnico</option>
+              <option value="consultoria">Consultoria</option>
+              <option value="parceria">Parceria</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-nos sobre seu projeto ou como podemos ajudar..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i>
+            Enviar Mensagem
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENCES SECTION ===== -->
+  <section class="references scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Referências do Setor</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Empresas que nos inspiram e com quem colaboramos</p>
+      </div>
+      <div class="references-grid">
+        <a href="https://www.ubisoft.com" target="_blank" class="reference-link">
+          <span>Ubisoft</span><i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.epicgames.com" target="_blank" class="reference-link">
+          <span>Epic Games</span><i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.riotgames.com" target="_blank" class="reference-link">
+          <span>Riot Games</span><i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.gigabyte.com" target="_blank" class="reference-link">
+          <span>Gigabyte</span><i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <canvas id="footer-particles-canvas" class="footer-particles-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
+              <span>XBYTE Games Studios</span>
+            </div>
+            <p>Criando experiências digitais que transcendem realidades desde 2019. Estúdio indie brasileiro apaixonado por jogos e tecnologia.</p>
+            <div class="footer-social">
+              <a href="https://instagram.com/XBYTE.Games" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/XBYTEStudios" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://linkedin.com/company/XBYTE.studiios" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/XBYTEStudios" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
+              <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+              <li><a href="#projetos"><i class="fas fa-chevron-right"></i> Projetos</a></li>
+              <li><a href="#jogos"><i class="fas fa-chevron-right"></i> Jogos</a></li>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento de Jogos</a></li>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Suporte Técnico</a></li>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Consultoria Gaming</a></li>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Trilhas Sonoras</a></li>
+              <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Gamificação</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul class="footer-contact-list">
+              <li><i class="fas fa-envelope"></i> contato@xbytegamesstudios.com</li>
+              <li><i class="fas fa-phone"></i> (21) 96450-8776</li>
+              <li><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ, Brasil</li>
+              <li>
+                <a href="https://github.com/XBYTEStudios" target="_blank" class="footer-github-link">
+                  <i class="fab fa-github"></i> github.com/XBYTEStudios
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 XBYTE Games Studios. Todos os direitos reservados.</p>
+        <p class="footer-credits">Desenvolvido com <i class="fas fa-heart" style="color: #1a6bff;"></i> em Rio de Janeiro</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== VISUAL FX LIBRARIES ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

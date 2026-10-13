@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Jogo da Memória - Personagens Históricos | XByte Games Studio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<main>
+		<div class="game">
+			<h1 class="game-title">Personagens Históricos</h1>
+			<div class="board is-loading">
+				<!-- Cards serão gerados dinamicamente pelo JavaScript -->
+			</div>
+			<div class="marquee">
+				<span class="marquee-text">Acertou!</span>
+			</div>
+			<div id="info-modal" class="info-modal hidden">
+				<div class="info-content">
+					<button id="close-info" class="close-btn">&times;</button>
+					<h2 id="character-name" class="character-name"></h2>
+					<p id="character-description" class="character-description"></p>
+				</div>
+			</div>
+		</div>
+		<div class="interface">
+			<div class="interface-data interface-data-tries">Tentativas: <span class="tries-value">0</span></div>
+			<div class="interface-data interface-data-best">Melhor: <span class="best-value">0</span></div>
+			<button id="reset-game" class="interface-btn">Novo Jogo</button>
+		</div>
+	</main>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>

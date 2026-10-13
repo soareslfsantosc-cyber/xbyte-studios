@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap");
+
+:root {
+	--text-color: oklch(98.5% 0 0);
+	--bg-color: oklch(14.5% 0 0);
+	--surface-color: oklch(39.6% 0.141 25.723);
+
+	--button-bg-color: oklch(40.8% 0.123 38.172);
+	--button-hover-bg-color: oklch(47% 0.157 37.304);
+	--button-active-bg-color: oklch(26.6% 0.079 36.259);
+	--button-match-bg-color: oklch(20.5% 0 0);
+	--button-match-active-bg-color: oklch(62.3% 0.214 259.815);
+	--button-border-color: oklch(47% 0.157 37.304);
+	--button-active-border-color: oklch(47% 0.157 37.304);
+	--button-match-border-color: oklch(27.4% 0.006 286.033);
+	--button-match-shine-color: oklch(64.6% 0.222 41.116);
+
+	/* prettier-ignore */
+	--ease-elastic: linear(0, 1.114 8.5%, 1.37 12.9%, 1.315 16.2%, 0.941 24%, 0.869 27.8%, 0.882 30.7%, 1.012 38.3%, 1.046 42.7%, 0.984, 1.006 72.2%, 1);
+	--ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+	--ease-in-back: cubic-bezier(0.68, -0.6, 0.32, 1);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: system-ui, sans-serif;
+	font-family: "Grenze Gotisch", system-ui;
+	color: var(--text-color);
+	background: var(--bg-color);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 1rem;
+}
+
+main {
+	display: grid;
+	gap: 2rem;
+	inline-size: 85vmin;
+	margin: auto;
+}
+
+.game {
+	position: relative;
+	container-type: inline-size;
+}
+
+.game-title {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: var(--text-color);
+}
+
+.interface {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	padding-inline: 0.2rem;
+	gap: 1rem;
+	font-size: calc(0.6rem + 2vmin);
+}
+
+.interface-data {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	line-height: 1;
+}
+
+.interface-data span {
+	display: inline-block;
+	position: relative;
+	top: -0.1em;
+	font-size: 1.8em;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: -0.05em;
+}
+
+.interface-data-best {
+	display: none;
+}
+
+.interface-btn {
+	margin-inline-start: auto;
+}
+
+button {
+	appearance: none;
+	font: inherit;
+	line-height: 1;
+	border: unset;
+	color: inherit;
+	padding: 0.5rem 1rem 0.6rem;
+	border-radius: 0.3rem;
+	background: var(--button-bg-color);
+	border: 1px solid var(--button-border-color);
+	cursor: pointer;
+	touch-action: manipulation;
+}
+
+button:focus-visible {
+	outline: 1px dashed white;
+	outline-offset: 2px;
+}
+
+button:not(:disabled):where(:hover, :focus-visible) {
+	--button-bg-color: var(--button-hover-bg-color);
+}
+
+.marquee {
+	--deg: -6deg;
+	--duration: 2.2s;
+	display: none;
+	place-content: center;
+	position: absolute;
+	inset: -5%;
+	width: 110%;
+	z-index: 1;
+	font-size: 26cqmin;
+	line-height: 1;
+	white-space: nowrap;
+	transform: rotate(var(--deg)) skew(var(--deg));
+	pointer-events: none;
+	paint-order: stroke;
+	-webkit-text-stroke: 6cqmin var(--bg-color);
+	animation: marquee-reveal var(--duration) var(--ease-out),
+		marquee-mask-position 3s var(--ease-out);
+	mask-image: linear-gradient(to left, transparent 50%, black 75%);
+	mask-position: 100% center;
+	mask-size: 400% 100%;
+}
+
+.marquee.is-combo {
+	--duration: 600ms;
+	letter-spacing: -0.05em;
+}
+
+.marquee-text {
+	animation: marquee-drift var(--duration) linear forwards;
+}
+
+.board {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2cqmin;
+}
+
+.card {
+	position: relative;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+	padding: 0;
+	font-size: 6cqmin;
+	aspect-ratio: 1;
+	border-radius: 10cqmin;
+	corner-shape: squircle;
+	will-change: transform;
+	transition: opacity 300ms var(--ease-out), background 100ms var(--ease-out);
+	box-shadow: inset 0 0 1cqmin 0.5cqmin var(--button-bg-color),
+		inset 0 0 0 1.5cqmin hsl(0 0% 0% / 0.1);
+	background: var(--button-bg-color);
+	border: 1px solid var(--button-border-color);
+}
+
+.card[aria-pressed="true"] {
+	--button-bg-color: var(--button-active-bg-color);
+	--button-border-color: var(--button-active-border-color);
+}
+
+.card:disabled {
+	--button-bg-color: var(--button-match-bg-color);
+	--button-border-color: var(--button-match-border-color);
+	cursor: revert;
+	color: currentcolor;
+}
+
+@supports not (corner-shape: squircle) {
+	.card {
+		border-radius: 7cqmin;
+	}
+}
+
+/* Card highlight effect */
+.card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	corner-shape: inherit;
+	box-shadow: inset 0 0 4cqmin 3cqmin var(--button-match-shine-color);
+	opacity: 0;
+}
+
+.content {
+	position: relative;
+	margin: auto;
+	pointer-events: none;
+	user-select: none;
+	transform: translateZ(0);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-image {
+	width: 90%;
+	height: 90%;
+	object-fit: contain;
+	border-radius: 8cqmin;
+}
+
+.card[aria-pressed="false"] .card-image {
+	opacity: 0;
+}
+
+.card[aria-pressed="true"] .card-image {
+	opacity: 1;
+}
+
+/* Info Modal */
+.info-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	animation: fadeIn 0.3s ease-out;
+}
+
+.info-modal.hidden {
+	display: none;
+}
+
+.info-content {
+	background: var(--surface-color);
+	padding: 2rem;
+	border-radius: 1rem;
+	max-width: 500px;
+	width: 90%;
+	position: relative;
+	animation: slideUp 0.3s ease-out;
+	border: 2px solid var(--button-border-color);
+}
+
+.close-btn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: transparent;
+	border: none;
+	color: var(--text-color);
+	font-size: 2rem;
+	cursor: pointer;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.close-btn:hover {
+	color: var(--button-hover-bg-color);
+}
+
+.character-name {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	color: var(--text-color);
+}
+
+.character-description {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text-color);
+	font-family: system-ui, sans-serif;
+}
+
+/* Animations */
+@keyframes marquee-reveal {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+@keyframes marquee-drift {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100vw);
+	}
+}
+
+@keyframes marquee-mask-position {
+	0% {
+		mask-position: 100% center;
+	}
+	100% {
+		mask-position: 0% center;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Loading state */
+.board.is-loading {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.board.is-complete {
+	pointer-events: none;
+}
+
+.board.is-shuffling {
+	pointer-events: none;
+}
+
+.board.is-shuffling .card {
+	animation: shuffle-rotate 0.6s ease-in-out;
+}
+
+@keyframes shuffle-rotate {
+	0% {
+		transform: rotateY(0deg) scale(1);
+	}
+	50% {
+		transform: rotateY(90deg) scale(0.9);
+	}
+	100% {
+		transform: rotateY(0deg) scale(1);
+	}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.game-title {
+		font-size: 1.8rem;
+	}
+
+	.board {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.info-content {
+		max-width: 90%;
+		padding: 1.5rem;
+	}
+
+	.character-name {
+		font-size: 1.4rem;
+	}
+
+	.character-description {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		gap: 1rem;
+	}
+
+	.game-title {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.board {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1cqmin;
+	}
+
+	.interface {
+		font-size: 0.8rem;
+	}
+
+	.info-content {
+		padding: 1rem;
+	}
+
+	.character-name {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.character-description {
+		font-size: 0.85rem;
+		line-height: 1.4;
+	}
+}
