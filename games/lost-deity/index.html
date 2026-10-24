@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost Deity Arcade - Fight</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Jogo isolado: mantém caminhos relativos para artes, estilos e scripts deste pacote. -->
+  <main class="game-container">
+
+    <!-- ========================= -->
+    <!-- TELA DE SELEÇÃO DE PERSONAGEM -->
+    <!-- ========================= -->
+    <div id="charSelectScreen" class="char-select-overlay">
+      <div class="char-select-content">
+        <h1 class="char-select-title">LOST DEITY ARCADE</h1>
+        <h2 id="selectPhaseLabel" class="char-select-phase">PLAYER 1 — ESCOLHA SEU PERSONAGEM</h2>
+
+        <!-- Avatares dos escolhidos -->
+        <div class="char-chosen-row">
+          <div class="char-chosen-box p1-box">
+            <div class="char-chosen-avatar" id="p1Avatar">?</div>
+            <div class="char-chosen-label">P1</div>
+            <div class="char-chosen-name" id="p1CharName">—</div>
+          </div>
+          <div class="char-chosen-vs">VS</div>
+          <div class="char-chosen-box p2-box">
+            <div class="char-chosen-avatar" id="p2Avatar">?</div>
+            <div class="char-chosen-label">P2</div>
+            <div class="char-chosen-name" id="p2CharName">—</div>
+          </div>
+        </div>
+
+        <!-- Grid de personagens -->
+        <div id="charGrid" class="char-grid"></div>
+
+        <!-- Marcadores P1/P2 (movidos via JS para dentro do card escolhido) -->
+        <div id="p1Marker" class="player-marker p1-marker" style="display:none">P1</div>
+        <div id="p2Marker" class="player-marker p2-marker" style="display:none">P2</div>
+
+        <!-- Instrução de teclado -->
+        <div class="char-select-hint">
+          Navegue com ← → ou A D &nbsp;|&nbsp; Confirme com ENTER ou ESPAÇO &nbsp;|&nbsp; Ou clique no personagem
+        </div>
+
+        <!-- Controles de luta -->
+        <div class="char-select-controls">
+          <div><b>P1</b> &nbsp; A / D mover &middot; W pular &middot; ESPAÇO golpe &middot; E combo &middot; Q launcher &middot; SHIFT defender</div>
+          <div><b>P2</b> &nbsp; ← / → mover &middot; ↑ pular &middot; ↓ golpe &middot; . combo &middot; , launcher &middot; ENTER defender</div>
+        </div>
+
+        <!-- Botão de confirmar -->
+        <button id="charConfirmBtn" class="char-confirm-btn" disabled>SELECIONE P1</button>
+      </div>
+    </div>
+
+    <!-- ========================= -->
+    <!-- HUD E CANVAS DE LUTA      -->
+    <!-- ========================= -->
+    <div class="canvas-wrapper">
+      <!-- Container para o Black Hole (Three.js) -->
+      <div id="blackHoleContainer"></div>
+
+      <!-- HUD Superior -->
+      <div class="hud">
+        <!-- Player 1 -->
+        <div class="player-stats">
+          <div class="stat-label">PLAYER 1</div>
+          <div class="player-name" id="playerName">Sūnyakal</div>
+          <div class="health-bar-container">
+            <div class="health-bar-bg"></div>
+            <div id="playerHealth" class="health-bar-fill"></div>
+          </div>
+          <div class="secondary-bars">
+            <div class="defense-bar-container">
+              <div id="playerDefense" class="defense-bar-fill"></div>
+            </div>
+            <div class="power-bar-container">
+              <div id="playerPower" class="power-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timer Central -->
+        <div id="timer" class="timer">120</div>
+
+        <!-- Player 2 -->
+        <div class="enemy-stats">
+          <div class="stat-label">PLAYER 2</div>
+          <div class="enemy-name" id="enemyName">Adam</div>
+          <div class="health-bar-container">
+            <div class="health-bar-bg"></div>
+            <div id="enemyHealth" class="health-bar-fill"></div>
+          </div>
+          <div class="secondary-bars">
+            <div class="defense-bar-container">
+              <div id="enemyDefense" class="defense-bar-fill"></div>
+            </div>
+            <div class="power-bar-container">
+              <div id="enemyPower" class="power-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Canvas -->
+      <canvas id="gameCanvas" width="1024" height="576"></canvas>
+
+      <!-- Announcements -->
+      <div id="announcement" class="announcement"></div>
+      <div id="displayText" class="winner-display">Tie</div>
+    </div>
+
+  </main>
+
+  <!-- Scripts: characters → config → utils → classes → Three.js → blackhole → stages → main -->
+  <script src="js/characters.js"></script>
+  <script src="config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/MaskPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="js/blackhole.js"></script>
+  <script src="js/stages.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

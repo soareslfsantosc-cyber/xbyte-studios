@@ -4,36 +4,36 @@
 
 **Página inicial:** `index.html`
 
-Esta versão moderniza a apresentação da Xbyte Studios com identidade visual azul/neon, animações e uma área para projetos e jogos. Os arquivos do site ficam na raiz desta branch.
+Esta é a versão final integrada do segundo site da Xbyte Studios. A página inicial e os recursos estáticos ficam diretamente na raiz da branch, sem uma pasta `xbyte_modernized/` duplicada. A vitrine apresenta três jogos e conserva os comentários em português adicionados aos pontos de integração.
 
 ## Estrutura
 
-- `index.html` — página principal.
-- `style.css` — estilos e layout responsivo.
-- `script.js` — interações, animações e efeitos visuais.
-- `assets/images/` — logotipo e imagens utilizadas pelo site.
-- `games/memoria/` — jogo da memória histórico integrado, com HTML, CSS, JavaScript e imagens próprios.
+- `index.html` — página principal e seção “Jogos Disponíveis”.
+- `style.css` e `script.js` — layout responsivo, interações e efeitos visuais.
+- `assets/demos/` e `assets/images/` — demonstrações, logotipo e imagens do site.
+- `games/lost-deity/` — jogo Lost Deity, com seus próprios scripts, estilos e recursos.
+- `games/memoria/` — jogo da memória com personagens históricos.
+- `games/tennis/` — jogo Ping Pong.
+- `LEIA-ME-INTEGRACAO.md` — notas sobre a integração dos jogos.
 
-## Recursos
+## Jogos integrados
 
-- Seções de apresentação, projetos, jogos, serviços, depoimentos, contato e referências.
-- Navegação adaptável, revelação de conteúdo durante a rolagem e animações.
-- Campo visual animado no destaque inicial, com alternativa em canvas 2D caso Three.js não esteja disponível.
-- Jogo da memória com personagens históricos, acessível em `games/memoria/index.html`.
-- Respeito à preferência do navegador por movimento reduzido em parte dos efeitos.
+| Jogo | Página |
+|---|---|
+| Lost Deity | `games/lost-deity/index.html` |
+| Jogo da Memória — Personagens Históricos | `games/memoria/index.html` |
+| Ping Pong | `games/tennis/index.html` |
 
 ## Executar localmente
 
-Não é necessário build. Na raiz do repositório, selecione esta branch e inicie um servidor estático:
+Não é necessário build. Na raiz do repositório, selecione a branch e inicie um servidor estático:
 
 ```bash
 git switch xbyte-games-studios
 python3 -m http.server 8000
 ```
 
-Acesse <http://localhost:8000>. O jogo da memória pode ser aberto em <http://localhost:8000/games/memoria/>.
-
-A página usa bibliotecas e fontes externas via CDN — entre elas Three.js, GSAP, Font Awesome e Google Fonts — para alguns efeitos e recursos visuais. Uma conexão com a internet é necessária para carregá-las; o código inclui alternativas para parte das animações quando as bibliotecas de movimento não estão disponíveis.
+Acesse <http://localhost:8000>. O Lost Deity usa bibliotecas Three.js via CDN para alguns efeitos, portanto esses efeitos precisam de conexão com a internet.
 
 ## Navegar entre versões
 

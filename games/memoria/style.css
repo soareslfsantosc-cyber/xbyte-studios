@@ -1,438 +1,1000 @@
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap");
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 :root {
+/* Comentário: define a propriedade CSS --text-color para a regra atual. */
 	--text-color: oklch(98.5% 0 0);
+/* Comentário: define a propriedade CSS --bg-color para a regra atual. */
 	--bg-color: oklch(14.5% 0 0);
+/* Comentário: define a propriedade CSS --surface-color para a regra atual. */
 	--surface-color: oklch(39.6% 0.141 25.723);
 
+/* Comentário: define a propriedade CSS --button-bg-color para a regra atual. */
 	--button-bg-color: oklch(40.8% 0.123 38.172);
+/* Comentário: define a propriedade CSS --button-hover-bg-color para a regra atual. */
 	--button-hover-bg-color: oklch(47% 0.157 37.304);
+/* Comentário: define a propriedade CSS --button-active-bg-color para a regra atual. */
 	--button-active-bg-color: oklch(26.6% 0.079 36.259);
+/* Comentário: define a propriedade CSS --button-match-bg-color para a regra atual. */
 	--button-match-bg-color: oklch(20.5% 0 0);
+/* Comentário: define a propriedade CSS --button-match-active-bg-color para a regra atual. */
 	--button-match-active-bg-color: oklch(62.3% 0.214 259.815);
+/* Comentário: define a propriedade CSS --button-border-color para a regra atual. */
 	--button-border-color: oklch(47% 0.157 37.304);
+/* Comentário: define a propriedade CSS --button-active-border-color para a regra atual. */
 	--button-active-border-color: oklch(47% 0.157 37.304);
+/* Comentário: define a propriedade CSS --button-match-border-color para a regra atual. */
 	--button-match-border-color: oklch(27.4% 0.006 286.033);
+/* Comentário: define a propriedade CSS --button-match-shine-color para a regra atual. */
 	--button-match-shine-color: oklch(64.6% 0.222 41.116);
 
 	/* prettier-ignore */
+/* Comentário: define a propriedade CSS --ease-elastic para a regra atual. */
 	--ease-elastic: linear(0, 1.114 8.5%, 1.37 12.9%, 1.315 16.2%, 0.941 24%, 0.869 27.8%, 0.882 30.7%, 1.012 38.3%, 1.046 42.7%, 0.984, 1.006 72.2%, 1);
+/* Comentário: define a propriedade CSS --ease-out para a regra atual. */
 	--ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+/* Comentário: define a propriedade CSS --ease-in-back para a regra atual. */
 	--ease-in-back: cubic-bezier(0.68, -0.6, 0.32, 1);
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 * {
+/* Comentário: define a propriedade CSS box-sizing para a regra atual. */
 	box-sizing: border-box;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
 html,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 body {
+/* Comentário: define a propriedade CSS height para a regra atual. */
 	height: 100%;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 body {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS display para a regra atual. */
 	display: grid;
+/* Comentário: define a propriedade CSS place-items para a regra atual. */
 	place-items: center;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
 	font-family: system-ui, sans-serif;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
 	font-family: "Grenze Gotisch", system-ui;
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: var(--text-color);
+/* Comentário: define a propriedade CSS background para a regra atual. */
 	background: var(--bg-color);
+/* Comentário: define a propriedade CSS text-rendering para a regra atual. */
 	text-rendering: optimizeLegibility;
+/* Comentário: define a propriedade CSS -webkit-font-smoothing para a regra atual. */
 	-webkit-font-smoothing: antialiased;
+/* Comentário: define a propriedade CSS -moz-osx-font-smoothing para a regra atual. */
 	-moz-osx-font-smoothing: grayscale;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
 	padding: 1rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
-main {
-	display: grid;
-	gap: 2rem;
-	inline-size: 85vmin;
-	margin: auto;
-}
-
-.game {
-	position: relative;
-	container-type: inline-size;
-}
-
-.game-title {
-	text-align: center;
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-	color: var(--text-color);
-}
-
-.interface {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	padding-inline: 0.2rem;
-	gap: 1rem;
-	font-size: calc(0.6rem + 2vmin);
-}
-
-.interface-data {
-	display: flex;
-	align-items: center;
-	gap: 0.3rem;
-	line-height: 1;
-}
-
-.interface-data span {
-	display: inline-block;
-	position: relative;
-	top: -0.1em;
-	font-size: 1.8em;
-	font-variant-numeric: tabular-nums;
-	letter-spacing: -0.05em;
-}
-
-.interface-data-best {
-	display: none;
-}
-
-.interface-btn {
-	margin-inline-start: auto;
-}
-
-button {
-	appearance: none;
-	font: inherit;
-	line-height: 1;
-	border: unset;
-	color: inherit;
-	padding: 0.5rem 1rem 0.6rem;
-	border-radius: 0.3rem;
-	background: var(--button-bg-color);
-	border: 1px solid var(--button-border-color);
-	cursor: pointer;
-	touch-action: manipulation;
-}
-
-button:focus-visible {
-	outline: 1px dashed white;
-	outline-offset: 2px;
-}
-
-button:not(:disabled):where(:hover, :focus-visible) {
-	--button-bg-color: var(--button-hover-bg-color);
-}
-
-.marquee {
-	--deg: -6deg;
-	--duration: 2.2s;
-	display: none;
-	place-content: center;
-	position: absolute;
-	inset: -5%;
-	width: 110%;
-	z-index: 1;
-	font-size: 26cqmin;
-	line-height: 1;
-	white-space: nowrap;
-	transform: rotate(var(--deg)) skew(var(--deg));
-	pointer-events: none;
-	paint-order: stroke;
-	-webkit-text-stroke: 6cqmin var(--bg-color);
-	animation: marquee-reveal var(--duration) var(--ease-out),
-		marquee-mask-position 3s var(--ease-out);
-	mask-image: linear-gradient(to left, transparent 50%, black 75%);
-	mask-position: 100% center;
-	mask-size: 400% 100%;
-}
-
-.marquee.is-combo {
-	--duration: 600ms;
-	letter-spacing: -0.05em;
-}
-
-.marquee-text {
-	animation: marquee-drift var(--duration) linear forwards;
-}
-
-.board {
-	position: relative;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 2cqmin;
-}
-
-.card {
-	position: relative;
-	display: grid;
-	place-items: center;
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stadium-bg {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: fixed;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+	inset: 0;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+	z-index: -1;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
 	overflow: hidden;
-	padding: 0;
-	font-size: 6cqmin;
-	aspect-ratio: 1;
-	border-radius: 10cqmin;
-	corner-shape: squircle;
-	will-change: transform;
-	transition: opacity 300ms var(--ease-out), background 100ms var(--ease-out);
-	box-shadow: inset 0 0 1cqmin 0.5cqmin var(--button-bg-color),
-		inset 0 0 0 1.5cqmin hsl(0 0% 0% / 0.1);
+/* Comentário: define a propriedade CSS background para a regra atual. */
+	background: #090718;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stadium-bg::after {
+/* Comentário: define a propriedade CSS content para a regra atual. */
+	content: "";
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+	inset: 0;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+	background: radial-gradient(ellipse at center, transparent 15%, rgba(4, 3, 14, .72) 84%);
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+	pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#stadium-canvas {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+	width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+	height: 100%;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+	image-rendering: pixelated;
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
+	opacity: .82;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+main {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+	z-index: 2;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: grid;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+	gap: 2rem;
+/* Comentário: define a propriedade CSS inline-size para a regra atual. */
+	inline-size: 85vmin;
+/* Comentário: define a propriedade CSS margin para a regra atual. */
+	margin: auto;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.game {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS container-type para a regra atual. */
+	container-type: inline-size;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.game-title {
+/* Comentário: define a propriedade CSS text-align para a regra atual. */
+	text-align: center;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+	font-size: 2.5rem;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+	margin-bottom: 1rem;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+	color: var(--text-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.interface {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: flex;
+/* Comentário: define a propriedade CSS flex-wrap para a regra atual. */
+	flex-wrap: wrap;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+	align-items: baseline;
+/* Comentário: define a propriedade CSS padding-inline para a regra atual. */
+	padding-inline: 0.2rem;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+	gap: 1rem;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+	font-size: calc(0.6rem + 2vmin);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.interface-data {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+	align-items: center;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+	gap: 0.3rem;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
+	line-height: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.interface-data span {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: inline-block;
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+	top: -0.1em;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+	font-size: 1.8em;
+/* Comentário: define a propriedade CSS font-variant-numeric para a regra atual. */
+	font-variant-numeric: tabular-nums;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+	letter-spacing: -0.05em;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.interface-data-best {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.interface-btn {
+/* Comentário: define a propriedade CSS margin-inline-start para a regra atual. */
+	margin-inline-start: auto;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+button {
+/* Comentário: define a propriedade CSS appearance para a regra atual. */
+	appearance: none;
+/* Comentário: define a propriedade CSS font para a regra atual. */
+	font: inherit;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
+	line-height: 1;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+	border: unset;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+	color: inherit;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+	padding: 0.5rem 1rem 0.6rem;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+	border-radius: 0.3rem;
+/* Comentário: define a propriedade CSS background para a regra atual. */
 	background: var(--button-bg-color);
+/* Comentário: define a propriedade CSS border para a regra atual. */
 	border: 1px solid var(--button-border-color);
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+	cursor: pointer;
+/* Comentário: define a propriedade CSS touch-action para a regra atual. */
+	touch-action: manipulation;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+button:focus-visible {
+/* Comentário: define a propriedade CSS outline para a regra atual. */
+	outline: 1px dashed white;
+/* Comentário: define a propriedade CSS outline-offset para a regra atual. */
+	outline-offset: 2px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+button:not(:disabled):where(:hover, :focus-visible) {
+/* Comentário: define a propriedade CSS --button-bg-color para a regra atual. */
+	--button-bg-color: var(--button-hover-bg-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.marquee {
+/* Comentário: define a propriedade CSS --deg para a regra atual. */
+	--deg: -6deg;
+/* Comentário: define a propriedade CSS --duration para a regra atual. */
+	--duration: 2.2s;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: none;
+/* Comentário: define a propriedade CSS place-content para a regra atual. */
+	place-content: center;
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+	inset: -5%;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+	width: 110%;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+	z-index: 1;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+	font-size: 26cqmin;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
+	line-height: 1;
+/* Comentário: define a propriedade CSS white-space para a regra atual. */
+	white-space: nowrap;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+	transform: rotate(var(--deg)) skew(var(--deg));
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+	pointer-events: none;
+/* Comentário: define a propriedade CSS paint-order para a regra atual. */
+	paint-order: stroke;
+/* Comentário: define a propriedade CSS -webkit-text-stroke para a regra atual. */
+	-webkit-text-stroke: 6cqmin var(--bg-color);
+/* Comentário: define a propriedade CSS animation para a regra atual. */
+	animation: marquee-reveal var(--duration) var(--ease-out),
+/* Comentário: completa uma declaração ou parte da lista de propriedades CSS. */
+		marquee-mask-position 3s var(--ease-out);
+/* Comentário: define a propriedade CSS mask-image para a regra atual. */
+	mask-image: linear-gradient(to left, transparent 50%, black 75%);
+/* Comentário: define a propriedade CSS mask-position para a regra atual. */
+	mask-position: 100% center;
+/* Comentário: define a propriedade CSS mask-size para a regra atual. */
+	mask-size: 400% 100%;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.marquee.is-combo {
+/* Comentário: define a propriedade CSS --duration para a regra atual. */
+	--duration: 600ms;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+	letter-spacing: -0.05em;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.marquee-text {
+/* Comentário: define a propriedade CSS animation para a regra atual. */
+	animation: marquee-drift var(--duration) linear forwards;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.board {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: grid;
+/* Comentário: define a propriedade CSS grid-template-columns para a regra atual. */
+	grid-template-columns: repeat(4, 1fr);
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+	gap: 2cqmin;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.card {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+	position: relative;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+	display: grid;
+/* Comentário: define a propriedade CSS place-items para a regra atual. */
+	place-items: center;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+	overflow: hidden;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+	padding: 0;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+	font-size: 6cqmin;
+/* Comentário: define a propriedade CSS aspect-ratio para a regra atual. */
+	aspect-ratio: 1;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+	border-radius: 10cqmin;
+/* Comentário: define a propriedade CSS corner-shape para a regra atual. */
+	corner-shape: squircle;
+/* Comentário: define a propriedade CSS will-change para a regra atual. */
+	will-change: transform;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+	transition: opacity 300ms var(--ease-out), background 100ms var(--ease-out);
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+	box-shadow: inset 0 0 1cqmin 0.5cqmin var(--button-bg-color),
+/* Comentário: completa uma declaração ou parte da lista de propriedades CSS. */
+		inset 0 0 0 1.5cqmin hsl(0 0% 0% / 0.1);
+/* Comentário: define a propriedade CSS background para a regra atual. */
+	background: var(--button-bg-color);
+/* Comentário: define a propriedade CSS border para a regra atual. */
+	border: 1px solid var(--button-border-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card[aria-pressed="true"] {
+/* Comentário: define a propriedade CSS --button-bg-color para a regra atual. */
 	--button-bg-color: var(--button-active-bg-color);
+/* Comentário: define a propriedade CSS --button-border-color para a regra atual. */
 	--button-border-color: var(--button-active-border-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card:disabled {
+/* Comentário: define a propriedade CSS --button-bg-color para a regra atual. */
 	--button-bg-color: var(--button-match-bg-color);
+/* Comentário: define a propriedade CSS --button-border-color para a regra atual. */
 	--button-border-color: var(--button-match-border-color);
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
 	cursor: revert;
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: currentcolor;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @supports not (corner-shape: squircle) {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.card {
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
 		border-radius: 7cqmin;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
 /* Card highlight effect */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card::before {
+/* Comentário: define a propriedade CSS content para a regra atual. */
 	content: "";
+/* Comentário: define a propriedade CSS position para a regra atual. */
 	position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
 	inset: 0;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
 	border-radius: inherit;
+/* Comentário: define a propriedade CSS corner-shape para a regra atual. */
 	corner-shape: inherit;
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
 	box-shadow: inset 0 0 4cqmin 3cqmin var(--button-match-shine-color);
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 	opacity: 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .content {
+/* Comentário: define a propriedade CSS position para a regra atual. */
 	position: relative;
+/* Comentário: define a propriedade CSS margin para a regra atual. */
 	margin: auto;
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
 	pointer-events: none;
+/* Comentário: define a propriedade CSS user-select para a regra atual. */
 	user-select: none;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 	transform: translateZ(0);
+/* Comentário: define a propriedade CSS width para a regra atual. */
 	width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
 	height: 100%;
+/* Comentário: define a propriedade CSS display para a regra atual. */
 	display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
 	align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
 	justify-content: center;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card-image {
+/* Comentário: define a propriedade CSS width para a regra atual. */
 	width: 90%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
 	height: 90%;
+/* Comentário: define a propriedade CSS object-fit para a regra atual. */
 	object-fit: contain;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
 	border-radius: 8cqmin;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card[aria-pressed="false"] .card-image {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 	opacity: 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .card[aria-pressed="true"] .card-image {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 	opacity: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
 /* Info Modal */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .info-modal {
+/* Comentário: define a propriedade CSS position para a regra atual. */
 	position: fixed;
+/* Comentário: define a propriedade CSS top para a regra atual. */
 	top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
 	left: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
 	width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
 	height: 100%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
 	background: rgba(0, 0, 0, 0.7);
+/* Comentário: define a propriedade CSS display para a regra atual. */
 	display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
 	align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
 	justify-content: center;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
 	z-index: 1000;
+/* Comentário: define a propriedade CSS animation para a regra atual. */
 	animation: fadeIn 0.3s ease-out;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .info-modal.hidden {
+/* Comentário: define a propriedade CSS display para a regra atual. */
 	display: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .info-content {
-	background: var(--surface-color);
-	padding: 2rem;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+	background: linear-gradient(145deg, rgba(56, 23, 78, .97), rgba(24, 14, 45, .98));
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+	padding: 2.2rem;
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+	box-shadow: 0 0 0 1px rgba(255, 210, 125, .25), 0 20px 80px rgba(0, 0, 0, .55), inset 0 0 35px rgba(255, 123, 68, .12);
+/* Comentário: define a propriedade CSS backdrop-filter para a regra atual. */
+	backdrop-filter: blur(8px);
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
 	border-radius: 1rem;
+/* Comentário: define a propriedade CSS max-width para a regra atual. */
 	max-width: 500px;
+/* Comentário: define a propriedade CSS width para a regra atual. */
 	width: 90%;
+/* Comentário: define a propriedade CSS position para a regra atual. */
 	position: relative;
-	animation: slideUp 0.3s ease-out;
+/* Comentário: define a propriedade CSS animation para a regra atual. */
+	animation: cardPop .55s var(--ease-elastic);
+/* Comentário: define a propriedade CSS border para a regra atual. */
 	border: 2px solid var(--button-border-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .close-btn {
+/* Comentário: define a propriedade CSS position para a regra atual. */
 	position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
 	top: 1rem;
+/* Comentário: define a propriedade CSS right para a regra atual. */
 	right: 1rem;
+/* Comentário: define a propriedade CSS background para a regra atual. */
 	background: transparent;
+/* Comentário: define a propriedade CSS border para a regra atual. */
 	border: none;
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: var(--text-color);
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 	font-size: 2rem;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
 	cursor: pointer;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
 	padding: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
 	width: 2rem;
+/* Comentário: define a propriedade CSS height para a regra atual. */
 	height: 2rem;
+/* Comentário: define a propriedade CSS display para a regra atual. */
 	display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
 	align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
 	justify-content: center;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .close-btn:hover {
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: var(--button-hover-bg-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .character-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 	font-size: 1.8rem;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
 	margin-bottom: 1rem;
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: var(--text-color);
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .character-description {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 	font-size: 1rem;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
 	line-height: 1.6;
+/* Comentário: define a propriedade CSS color para a regra atual. */
 	color: var(--text-color);
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
 	font-family: system-ui, sans-serif;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
 /* Animations */
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes marquee-reveal {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	0% {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 0;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateX(-100%);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	50% {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	100% {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 0;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateX(100%);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes marquee-drift {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	0% {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateX(0);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	100% {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateX(100vw);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes marquee-mask-position {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	0% {
+/* Comentário: define a propriedade CSS mask-position para a regra atual. */
 		mask-position: 100% center;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	100% {
+/* Comentário: define a propriedade CSS mask-position para a regra atual. */
 		mask-position: 0% center;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes fadeIn {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	from {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	to {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes slideUp {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	from {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateY(30px);
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	to {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: translateY(0);
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 		opacity: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
 /* Loading state */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .board.is-loading {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
 	opacity: 0.5;
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
 	pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .board.is-complete {
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
 	pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .board.is-shuffling {
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
 	pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.board.is-previewing {
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+	pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 .board.is-shuffling .card {
+/* Comentário: define a propriedade CSS animation para a regra atual. */
 	animation: shuffle-rotate 0.6s ease-in-out;
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @keyframes shuffle-rotate {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	0% {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: rotateY(0deg) scale(1);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	50% {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: rotateY(90deg) scale(0.9);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	100% {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
 		transform: rotateY(0deg) scale(1);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
 /* Responsive */
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @media (max-width: 768px) {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.game-title {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 1.8rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.board {
+/* Comentário: define a propriedade CSS grid-template-columns para a regra atual. */
 		grid-template-columns: repeat(3, 1fr);
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.info-content {
+/* Comentário: define a propriedade CSS max-width para a regra atual. */
 		max-width: 90%;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
 		padding: 1.5rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.character-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 1.4rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.character-description {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 0.9rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
 
+/* Comentário: define uma regra CSS condicional ou de configuração. */
 @media (max-width: 480px) {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	main {
+/* Comentário: define a propriedade CSS gap para a regra atual. */
 		gap: 1rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.game-title {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 1.5rem;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
 		margin-bottom: 0.5rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.board {
+/* Comentário: define a propriedade CSS grid-template-columns para a regra atual. */
 		grid-template-columns: repeat(2, 1fr);
+/* Comentário: define a propriedade CSS gap para a regra atual. */
 		gap: 1cqmin;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.interface {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 0.8rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.info-content {
+/* Comentário: define a propriedade CSS padding para a regra atual. */
 		padding: 1rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.character-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 1.2rem;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
 		margin-bottom: 0.5rem;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
 
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
 	.character-description {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
 		font-size: 0.85rem;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
 		line-height: 1.4;
+/* Comentário: encerra a regra CSS iniciada acima. */
 	}
+/* Comentário: encerra a regra CSS iniciada acima. */
 }
+
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.info-modal.is-opening .info-content { animation: cardPop .65s var(--ease-elastic); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.info-modal.is-opening .character-name { animation: titleReveal .55s var(--ease-out) both; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.character-description::after { content: "▋"; color: #ffd27d; animation: caretBlink .75s steps(1) infinite; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.character-description { min-height: 7rem; }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes cardPop { 0% { opacity: 0; transform: translateY(80px) rotate(-4deg) scale(.72); } 65% { transform: translateY(-10px) rotate(1deg) scale(1.03); } 100% { opacity: 1; transform: translateY(0) rotate(0) scale(1); } }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes titleReveal { from { opacity: 0; letter-spacing: .45em; transform: translateX(-20px); } to { opacity: 1; letter-spacing: normal; transform: translateX(0); } }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes caretBlink { 50% { opacity: 0; } }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; } }
+
+
+/* NEON BLUE / BLACK ART DIRECTION */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+:root {
+/* Comentário: define a propriedade CSS --text-color para a regra atual. */
+  --text-color: #eaf7ff;
+/* Comentário: define a propriedade CSS --bg-color para a regra atual. */
+  --bg-color: #030711;
+/* Comentário: define a propriedade CSS --surface-color para a regra atual. */
+  --surface-color: #071526;
+/* Comentário: define a propriedade CSS --button-bg-color para a regra atual. */
+  --button-bg-color: #071b31;
+/* Comentário: define a propriedade CSS --button-hover-bg-color para a regra atual. */
+  --button-hover-bg-color: #0b3559;
+/* Comentário: define a propriedade CSS --button-active-bg-color para a regra atual. */
+  --button-active-bg-color: #020b16;
+/* Comentário: define a propriedade CSS --button-match-bg-color para a regra atual. */
+  --button-match-bg-color: #06101c;
+/* Comentário: define a propriedade CSS --button-border-color para a regra atual. */
+  --button-border-color: #1689c9;
+/* Comentário: define a propriedade CSS --button-active-border-color para a regra atual. */
+  --button-active-border-color: #58d6ff;
+/* Comentário: define a propriedade CSS --button-match-border-color para a regra atual. */
+  --button-match-border-color: #07547e;
+/* Comentário: define a propriedade CSS --button-match-shine-color para a regra atual. */
+  --button-match-shine-color: #16c8ff;
+/* Comentário: define a propriedade CSS --neon-blue para a regra atual. */
+  --neon-blue: #24c8ff;
+/* Comentário: define a propriedade CSS --neon-cyan para a regra atual. */
+  --neon-cyan: #75edff;
+/* Comentário: define a propriedade CSS --neon-purple para a regra atual. */
+  --neon-purple: #6e6bff;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+body { background: #030711; }
+/* Comentário: define a propriedade CSS body para a regra atual. */
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 1; background: repeating-linear-gradient(0deg, rgba(42, 190, 255, .025) 0 1px, transparent 1px 4px); mix-blend-mode: screen; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.stadium-bg { background: #02050d; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.stadium-bg::before { content: ""; position: absolute; inset: -20%; background: conic-gradient(from 220deg at 50% 52%, transparent 0 23%, rgba(0, 167, 255, .22) 27%, transparent 31% 53%, rgba(82, 70, 255, .2) 58%, transparent 62%); filter: blur(22px); animation: stadiumSweep 9s linear infinite; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.stadium-bg::after { background: radial-gradient(ellipse at center, transparent 12%, rgba(1, 5, 14, .78) 82%), linear-gradient(180deg, rgba(5, 11, 29, .18), rgba(1, 4, 11, .82)); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+#stadium-canvas { opacity: .92; filter: saturate(1.35) contrast(1.12); animation: stadiumPulse 5s ease-in-out infinite; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+main { filter: drop-shadow(0 0 24px rgba(0, 153, 255, .2)); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.game-title { color: var(--neon-cyan); text-shadow: 0 0 5px #0ab5ff, 0 0 24px rgba(0, 178, 255, .75); letter-spacing: .04em; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card { border: 1px solid var(--neon-blue); background: linear-gradient(145deg, #0a2843, #030b17 65%); box-shadow: inset 0 0 18px rgba(21, 160, 255, .28), 0 0 8px rgba(0, 145, 255, .22); border-radius: 18%; transform: translateZ(0); transition: transform .3s var(--ease-elastic), box-shadow .3s ease, filter .3s ease; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card::after { content: "✦"; position: absolute; color: rgba(111, 229, 255, .68); font-size: 1.7em; text-shadow: 0 0 14px #17c9ff; opacity: .5; transition: transform .45s ease, opacity .3s; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card:hover:not(:disabled) { transform: translateY(-7px) scale(1.035) rotateX(5deg); box-shadow: inset 0 0 24px rgba(21, 190, 255, .5), 0 0 24px rgba(0, 183, 255, .42); filter: brightness(1.2); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card[aria-pressed="true"] { background: linear-gradient(145deg, #123b63, #061729); box-shadow: inset 0 0 26px rgba(47, 211, 255, .55), 0 0 24px rgba(16, 183, 255, .45); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card[aria-pressed="true"]::after, .card:disabled::after { opacity: 0; transform: scale(2); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card:disabled { background: linear-gradient(145deg, #071521, #02070d); opacity: .82; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.card-image { border: 2px solid rgba(93, 225, 255, .55); box-shadow: 0 0 14px rgba(13, 192, 255, .35); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+button { background: linear-gradient(135deg, #092641, #061323); border-color: var(--neon-blue); box-shadow: 0 0 12px rgba(14, 169, 255, .2), inset 0 0 10px rgba(30, 175, 255, .1); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.interface { color: #a9e9ff; text-shadow: 0 0 8px rgba(0, 183, 255, .48); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.info-modal { background: rgba(1, 5, 15, .78); backdrop-filter: blur(5px); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.info-content { background: linear-gradient(145deg, rgba(7, 31, 55, .98), rgba(2, 9, 20, .98)); border-color: var(--neon-blue); box-shadow: 0 0 0 1px rgba(64, 219, 255, .4), 0 0 35px rgba(0, 153, 255, .5), inset 0 0 35px rgba(0, 185, 255, .14); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.character-name { color: var(--neon-cyan); text-shadow: 0 0 12px #12bfff; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.character-description::after { color: var(--neon-cyan); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-panel { position: fixed; z-index: 1100; top: 50%; left: 50%; width: min(480px, 90vw); transform: translate(-50%, -46%) scale(.86); opacity: 0; pointer-events: none; padding: 1.5rem; border: 1px solid var(--neon-blue); border-radius: 18px; background: linear-gradient(145deg, rgba(5, 26, 48, .98), rgba(1, 7, 17, .99)); box-shadow: 0 0 0 1px rgba(46, 208, 255, .18), 0 0 60px rgba(0, 134, 255, .45); transition: opacity .35s ease, transform .55s var(--ease-elastic); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-panel.is-visible { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-head { display: flex; align-items: center; justify-content: space-between; color: var(--neon-cyan); letter-spacing: .12em; font-size: 1.15rem; text-shadow: 0 0 10px #06bfff; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-close { padding: .15rem .55rem; color: var(--neon-cyan); font-size: 1.5rem; border: 0; background: transparent; box-shadow: none; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-subtitle { margin: .65rem 0 1rem; color: #79a9be; font-family: system-ui, sans-serif; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-list { display: grid; gap: .55rem; list-style: none; font-family: system-ui, sans-serif; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-list li { display: grid; grid-template-columns: 2rem 1fr auto; gap: .65rem; align-items: center; padding: .62rem .7rem; border: 1px solid rgba(24, 173, 232, .28); background: rgba(3, 21, 38, .8); border-radius: 8px; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-list li span:last-child { color: #73cae9; font-size: .82rem; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.rank-number { color: var(--neon-cyan); font-family: "Grenze Gotisch", system-ui; font-size: 1.2rem; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.ranking-empty { color: #6d94a9; font-family: system-ui, sans-serif; font-size: .9rem; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.interface-btn-secondary { margin-inline-start: auto; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.interface-btn-secondary + .interface-btn { margin-inline-start: 0; }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes stadiumSweep { to { transform: rotate(360deg); } }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes stadiumPulse { 0%, 100% { opacity: .86; } 50% { opacity: 1; } }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes neonFlicker { 0%, 18%, 22%, 63%, 64%, 100% { opacity: 1; } 20%, 62% { opacity: .65; } }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.game-title { animation: neonFlicker 7s infinite; }
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@media (max-width: 600px) { .interface { gap: .5rem; } .interface-btn-secondary { margin-inline-start: 0; } .ranking-list li { grid-template-columns: 1.7rem 1fr; } .ranking-list li span:last-child { grid-column: 2; } }

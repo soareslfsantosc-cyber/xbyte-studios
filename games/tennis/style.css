@@ -1,0 +1,128 @@
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+* {
+/* Comentário: define a propriedade CSS margin para a regra atual. */
+  margin: 0;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 0;
+/* Comentário: define a propriedade CSS box-sizing para a regra atual. */
+  box-sizing: border-box;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+html, body {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #050208;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+  overflow: hidden;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Press Start 2P', monospace;
+/* Comentário: define a propriedade CSS touch-action para a regra atual. */
+  touch-action: none;
+/* Comentário: define a propriedade CSS user-select para a regra atual. */
+  user-select: none;
+/* Comentário: define a propriedade CSS -webkit-user-select para a regra atual. */
+  -webkit-user-select: none;
+/* Comentário: define a propriedade CSS -webkit-tap-highlight-color para a regra atual. */
+  -webkit-tap-highlight-color: transparent;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+body {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+  /* Subtle radial glow behind the screen */
+/* Comentário: define a propriedade CSS background-image para a regra atual. */
+  background-image: radial-gradient(ellipse 60% 50% at 50% 50%, #1a0a2e 0%, #050208 70%);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#wrap {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: pixelated;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: -moz-crisp-edges;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: crisp-edges;
+  /* Outer CRT phosphor glow */
+/* Comentário: define a propriedade CSS filter para a regra atual. */
+  filter: drop-shadow(0 0 18px rgba(80,40,180,0.55)) drop-shadow(0 0 6px rgba(200,160,255,0.3));
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#game {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: block;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: pixelated;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: -moz-crisp-edges;
+/* Comentário: define a propriedade CSS image-rendering para a regra atual. */
+  image-rendering: crisp-edges;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #000;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* CRT scanline overlay */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#scan {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+  inset: 0;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: repeating-linear-gradient(
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    to bottom,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    rgba(0,0,0,0)      0,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    rgba(0,0,0,0)      2px,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    rgba(0,0,0,0.18)   3px,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    rgba(0,0,0,0)      4px
+/* Comentário: completa uma declaração ou parte da lista de propriedades CSS. */
+  );
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+  pointer-events: none;
+/* Comentário: define a propriedade CSS mix-blend-mode para a regra atual. */
+  mix-blend-mode: multiply;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* CRT vignette */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#scan::after {
+/* Comentário: define a propriedade CSS content para a regra atual. */
+  content: '';
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+  inset: 0;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: radial-gradient(ellipse 90% 85% at 50% 50%,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    transparent 55%,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    rgba(0,0,0,0.45) 100%
+/* Comentário: completa uma declaração ou parte da lista de propriedades CSS. */
+  );
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+  pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}

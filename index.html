@@ -1,338 +1,812 @@
 <!DOCTYPE html>
+  <!-- Elemento raiz; o atributo de idioma identifica o idioma principal da página. -->
 <html lang="pt-BR">
+  <!-- Cabeçalho com metadados, título e recursos externos da página. -->
 <head>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <title>XBYTE Games Studios – Estúdio de Jogos Indie</title>
+  <!-- Metadado que informa ao navegador ou aos mecanismos de busca uma propriedade do documento. -->
   <meta charset="UTF-8"/>
+  <!-- Metadado que informa ao navegador ou aos mecanismos de busca uma propriedade do documento. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Metadado que informa ao navegador ou aos mecanismos de busca uma propriedade do documento. -->
   <meta name="description" content="XBYTE Games Studios – Estúdio indie brasileiro criando experiências imersivas. Metroidvania, FPS e aventuras narrativas desenvolvidos com paixão e tecnologia.">
+  <!-- Metadado que informa ao navegador ou aos mecanismos de busca uma propriedade do documento. -->
   <meta name="author" content="XBYTE Games Studios">
+  <!-- Metadado que informa ao navegador ou aos mecanismos de busca uma propriedade do documento. -->
   <meta name="keywords" content="Jogos, Estúdio, Indie, Metroidvania, FPS, Horror, Game Development, Gigabyte, Suporte Técnico">
+  <!-- Vínculo com um recurso externo, como ícone, folha de estilos ou fonte. -->
   <link rel="icon" type="image/png" href="assets/images/xbyte_logo.png">
+  <!-- Vínculo com um recurso externo, como ícone, folha de estilos ou fonte. -->
   <link rel="stylesheet" href="style.css"/>
+  <!-- Vínculo com um recurso externo, como ícone, folha de estilos ou fonte. -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Vínculo com um recurso externo, como ícone, folha de estilos ou fonte. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+  <!-- Contém a interface visível e interativa apresentada ao visitante. -->
 <body>
 
   <!-- ===== LOADING SCREEN ===== -->
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
   <div id="loading-screen">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="loading-content">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="loading-logo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
         <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="loading-label">XBYTE GAMES STUDIOS</div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="loading-bar">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="loading-progress"></div>
       </div>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
       <p class="loading-text">Iniciando sistemas...</p>
     </div>
   </div>
 
   <!-- ===== NAVIGATION ===== -->
+  <!-- Região de navegação principal do site. -->
   <nav class="navbar" id="navbar">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="nav-container">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
       <a href="#home" class="nav-logo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
         <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
         <span>XBYTE</span>
       </a>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="nav-menu" id="nav-menu">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#home"     class="nav-link">Início</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#sobre"    class="nav-link">Sobre</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+        <a href="#equipe"   class="nav-link">Equipe</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#projetos" class="nav-link">Projetos</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#jogos"    class="nav-link">Jogos</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#servicos" class="nav-link">Serviços</a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#contato"  class="nav-link">Contato</a>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="bar"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="bar"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="bar"></span>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section id="home" class="hero">
+  <!-- Superfície de desenho usada pelos efeitos gráficos renderizados por JavaScript. -->
     <canvas id="hero-canvas" class="hero-canvas"></canvas>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="hero-logo-watermark">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
       <img src="assets/images/xbyte_logo.png" alt="" aria-hidden="true"/>
     </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="hero-scanlines" aria-hidden="true"></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="hero-content">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="hero-eyebrow">
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="eyebrow-dot"></span>
         Indie Game Studio &nbsp;·&nbsp; Est. 2019 &nbsp;·&nbsp; Rio de Janeiro
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="eyebrow-dot"></span>
       </div>
+  <!-- Título principal da página, com hierarquia semântica de nível um. -->
       <h1 class="hero-title">
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="title-line">XBYTE</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="title-line title-accent">GAMES STUDIOS</span>
       </h1>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
       <p class="hero-subtitle" id="hero-typing-target">Criando experiências imersivas que transcendem realidades</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="hero-buttons">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#projetos" class="btn btn-primary">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
           <i class="fas fa-gamepad"></i>
           Nossos Jogos
         </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="#sobre" class="btn btn-secondary">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
           <i class="fas fa-info-circle"></i>
           Conheça-nos
         </a>
       </div>
     </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="hero-scroll">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="scroll-indicator">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
         <span>Explorar</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="scroll-arrow"></div>
       </div>
     </div>
   </section>
 
   <!-- ===== ABOUT SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section id="sobre" class="about scroll-reveal">
+  <!-- Superfície de desenho usada pelos efeitos gráficos renderizados por JavaScript. -->
     <canvas id="about-topo-canvas" class="about-topo-canvas" aria-hidden="true"></canvas>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">Sobre Nós</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="about-content">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="about-text">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Pioneiros em Experiências Digitais</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
           <p>
             A XBYTE Games Studios nasceu da paixão por criar mundos digitais únicos e envolventes.
             Somos um estúdio indie brasileiro especializado em jogos narrativos, com foco especial
             em Metroidvanias atmosféricos, FPS psicológicos e aventuras góticas.
           </p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
           <p>
             Nossa missão é transcender os limites entre realidade e ficção, criando experiências
             que permanecem na memória dos jogadores muito depois dos créditos finais. Cada projeto
             é uma jornada cuidadosamente elaborada, onde cada pixel conta uma história.
           </p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="about-stats">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="stat">
-              <span class="stat-number" data-target="3">0</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="stat-number" data-target="7">0</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
               <span class="stat-label">Projetos em Desenvolvimento</span>
             </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="stat">
-              <span class="stat-number">5+</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="stat-number">2</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
               <span class="stat-label">Anos de Experiência</span>
             </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="stat">
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
               <span class="stat-number">100%</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
               <span class="stat-label">Paixão por Jogos</span>
             </div>
           </div>
         </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="about-image">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="about-image-frame">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
             <img src="assets/images/gaming_setup.jpg" alt="Setup de desenvolvimento da XBYTE" />
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="about-image-accent" aria-hidden="true"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projetos" class="projects">
+  <!-- ===== TEAM SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
+  <section id="equipe" class="team scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
-        <h2 class="section-title">Nossos Projetos</h2>
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
+        <h2 class="section-title">Nossa Equipe</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+        <p class="section-subtitle">Conheça as pessoas por trás da XBYTE Games Studios</p>
+      </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+      <div class="team-grid">
+
+        <!--
+          Para adicionar um novo membro: copie um bloco <article class="team-card scroll-reveal"> do time
+          (não o do fundador), cole logo depois do último e troque a foto (assets/images/), o nome,
+          o cargo e a descrição. A grade se organiza sozinha: 3 por linha no computador, 2 no tablet
+          e 1 no celular, centralizando a última linha.
+        -->
+
+        <!-- Fundador: Lucas Fabiano (card em destaque) -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card team-card--featured scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/lucas_fabiano.jpg" alt="Lucas Fabiano, CEO da XBYTE Games Studios" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Lucas Fabiano</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">CEO &bull; Dev Front-end &amp; Back-end</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Fundador da XBYTE Games Studios, estudante de Técnico em Informática e desenvolvedor web com foco em JavaScript, HTML, CSS e tecnologias modernas. Apaixonado por inovação, desenvolvimento de jogos e criação de soluções digitais, busco transformar ideias em projetos reais que conectem tecnologia, criatividade e desempenho.</p>
+          </div>
+        </article>
+
+        <!-- Membro: Guilherme Madeira -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/guilherme_madeira.jpg" alt="Guilherme Madeira, Documentador e Gerente de Projetos" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Guilherme Madeira</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Documentador e Gerente de Projetos</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Responsável pela documentação e organização dos projetos, contribui com ideias que inspiraram grande parte das iniciativas da empresa e possui conhecimentos em hardware.</p>
+          </div>
+        </article>
+
+        <!-- Membro: André Luiz -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/andre_luiz.jpg" alt="André Luiz, Documentador" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>André Luiz</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Documentador</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Atua na documentação dos projetos e possui domínio de tecnologias front-end, incluindo HTML5, CSS3 e JavaScript, contribuindo para a estruturação e o desenvolvimento de soluções web.</p>
+          </div>
+        </article>
+
+        <!-- Membro: João Pedro de Melo -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/joao_pedro_de_melo.jpg" alt="João Pedro de Melo, Analista de Software e Documentador" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>João Pedro de Melo</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Analista de Software e Documentador</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Contribui para a análise e documentação de software, com conhecimentos em linguagens de programação, dados e arquitetura de dados, apoiando a organização e a estruturação das soluções tecnológicas.</p>
+          </div>
+        </article>
+
+        <!-- Membro: Gustavo Samuel -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/gustavo_samuel.jpg" alt="Gustavo Samuel, Designer UX/UI" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Gustavo Samuel</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Designer UX/UI</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Responsável pela concepção visual e pela organização das interfaces, com foco em paletas de cores, estrutura de layouts e composição de experiências digitais.</p>
+          </div>
+        </article>
+
+        <!-- Membro: Gabriel Ribeiro -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/gabriel_ribeiro.jpg" alt="Gabriel Ribeiro, Game Designer" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Gabriel Ribeiro</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Game Designer</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Atua na criação de personagens e no desenvolvimento de jogabilidades, contribuindo para a construção das mecânicas e das experiências interativas dos jogos da empresa.</p>
+          </div>
+        </article>
+
+        <!-- Membro: Igor Gargano -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="team-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-photo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img src="assets/images/igor_gargano.jpg" alt="Igor Gargano, Desenvolvedor Back-end" width="680" height="850" loading="lazy" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner tr" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner bl" aria-hidden="true"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="team-corner br" aria-hidden="true"></span>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="team-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Igor Gargano</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-role">Desenvolvedor Back-end</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="team-bio">Atua no desenvolvimento da lógica e da estrutura interna das aplicações, com domínio de SQL, PHP, Python e outras tecnologias back-end. Possui conhecimentos em estruturas de dados, arquitetura de dados e programação orientada a objetos, contribuindo para a construção de soluções robustas e organizadas.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
+  <section id="projetos" class="projects">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+    <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+      <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
+        <h2 class="section-title">Nossos Projetos</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+        <div class="section-divider"></div>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
         <p class="section-subtitle">Mundos criados com paixão, pixel a pixel</p>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="projects-grid">
 
-        <!-- Project 1 -->
-        <div class="project-card scroll-reveal">
-          <div class="project-image">
-            <img src="assets/images/gothic_knight.jpg" alt="THE Knight Nocturne" loading="lazy"/>
-            <div class="project-status status-dev">Em Desenvolvimento</div>
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>THE Knight Nocturne</h3>
-                <p>Aventura narrativa em ruínas góticas</p>
-                <div class="project-tags">
-                  <span class="tag">Aventura</span>
-                  <span class="tag">Narrativo</span>
-                  <span class="tag">Gótico</span>
-                </div>
-              </div>
+        <!-- Projeto: Subway Super Hopper (demonstração auto-jogável) -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="project-card project-card--demo scroll-reveal" tabindex="0"
+                 data-demo="assets/demos/subway-super-hopper.webp"
+                 aria-label="Subway Super Hopper — jogo em desenvolvimento. Passe o mouse, toque ou use o foco do teclado para ver a demonstração.">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="project-image demo-stage">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-poster" src="assets/demos/subway-super-hopper-poster.jpg" alt="Prévia do Subway Super Hopper: um coelhinho de blocos pulando obstáculos em uma pista rosa" width="480" height="320" loading="lazy" decoding="async"/>
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-anim" alt="" aria-hidden="true" width="480" height="320" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="demo-live" aria-hidden="true"><span class="demo-dot"></span> Demo</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="demo-hint" aria-hidden="true">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fas fa-play"></i>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-hover">Passe o mouse</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-touch">Toque para ver</span>
             </div>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="project-content">
-            <h3>THE Knight Nocturne</h3>
-            <p>Uma jornada sombria através de ruínas góticas, onde cada sombra esconde segredos ancestrais e cada passo revela mistérios há muito esquecidos.</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Subway Super Hopper</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <p>Runner infinito em 3D low-poly feito com Three.js. Controle um bichinho de blocos, troque de faixa, pule obstáculos e aguente a velocidade que só aumenta — cada partida sorteia um tema e um personagem diferentes.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="project-features">
-              <span><i class="fas fa-chess-knight"></i> Combate tático</span>
-              <span><i class="fas fa-book"></i> Narrativa profunda</span>
-              <span><i class="fas fa-eye"></i> Atmosfera única</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-cube"></i> 3D low-poly</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-palette"></i> 5 temas</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-bolt"></i> Runner infinito</span>
             </div>
-            <a href="#contato" class="btn btn-project">
-              <i class="fas fa-info-circle"></i> Saiba Mais
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="project-status project-status--inline status-dev"><span class="status-dot" aria-hidden="true"></span>Em Desenvolvimento</span>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+            <a href="https://github.com/soareslfsantosc-cyber/subway-super-hopper-game" class="btn-project" target="_blank" rel="noopener">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fab fa-github"></i> Ver repositório no GitHub
             </a>
           </div>
-        </div>
+        </article>
 
-        <!-- Project 2 -->
-        <div class="project-card scroll-reveal">
-          <div class="project-image">
-            <img src="assets/images/metroidvania_game.png" alt="THE Flightless" loading="lazy"/>
-            <div class="project-status status-dev">Em Desenvolvimento</div>
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>THE Flightless</h3>
-                <p>Plataforma interconectada com mecânicas invertidas</p>
-                <div class="project-tags">
-                  <span class="tag">Metroidvania</span>
-                  <span class="tag">Plataforma</span>
-                  <span class="tag">Exploração</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3>THE Flightless</h3>
-            <p>Um Metroidvania inovador onde a exploração vertical desafia as convenções, criando um mundo interconectado de possibilidades infinitas.</p>
-            <div class="project-features">
-              <span><i class="fas fa-arrow-up"></i> Exploração vertical</span>
-              <span><i class="fas fa-puzzle-piece"></i> Mecânicas únicas</span>
-              <span><i class="fas fa-map"></i> Mundo interconectado</span>
-            </div>
-            <a href="#contato" class="btn btn-project">
-              <i class="fas fa-info-circle"></i> Saiba Mais
-            </a>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-card scroll-reveal">
-          <div class="project-image">
-            <img src="assets/images/horror_fps.png" alt="THE GOD Echo of Void" loading="lazy"/>
-            <div class="project-status status-concept">Conceito</div>
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>THE GOD Echo of Void</h3>
-                <p>FPS psicológico com horrores dimensionais</p>
-                <div class="project-tags">
-                  <span class="tag">FPS</span>
-                  <span class="tag">Horror</span>
-                  <span class="tag">Psicológico</span>
-                </div>
-              </div>
+        <!-- Projeto: Air Hockey (demonstração auto-jogável) -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="project-card project-card--demo scroll-reveal" tabindex="0"
+                 data-demo="assets/demos/air-hockey.webp"
+                 aria-label="Air Hockey — jogo em desenvolvimento. Passe o mouse, toque ou use o foco do teclado para ver a demonstração.">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="project-image demo-stage">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-poster" src="assets/demos/air-hockey-poster.jpg" alt="Prévia do Air Hockey: mesa neon azul com a raquete do jogador, a da CPU e o disco" width="480" height="320" loading="lazy" decoding="async"/>
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-anim" alt="" aria-hidden="true" width="480" height="320" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="demo-live" aria-hidden="true"><span class="demo-dot"></span> Demo</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="demo-hint" aria-hidden="true">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fas fa-play"></i>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-hover">Passe o mouse</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-touch">Toque para ver</span>
             </div>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="project-content">
-            <h3>THE GOD Echo of Void</h3>
-            <p>Uma experiência FPS que desafia a percepção da realidade, navegando por labirintos mentais onde o horror psicológico encontra a ação intensa.</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Air Hockey</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <p>Hóquei de mesa em visual neon, você contra a CPU. O primeiro a marcar 7 gols vence, com rebatidas potentes, partículas, câmera lenta no ponto decisivo e estatísticas ao vivo, como velocidade máxima e sequência de pontos.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="project-features">
-              <span><i class="fas fa-ghost"></i> Horror psicológico</span>
-              <span><i class="fas fa-brain"></i> Narrativa mental</span>
-              <span><i class="fas fa-crosshairs"></i> Ação intensa</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-robot"></i> Contra a CPU</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-bolt"></i> Power hits</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-trophy"></i> Primeiro a 7</span>
             </div>
-            <a href="#contato" class="btn btn-project">
-              <i class="fas fa-info-circle"></i> Saiba Mais
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="project-status project-status--inline status-dev"><span class="status-dot" aria-hidden="true"></span>Em Desenvolvimento</span>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+            <a href="https://github.com/soareslfsantosc-cyber/air-hockey-game" class="btn-project" target="_blank" rel="noopener">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fab fa-github"></i> Ver repositório no GitHub
             </a>
           </div>
-        </div>
+        </article>
+
+
+        <!-- Projeto: OutRun (demonstração auto-jogável) -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="project-card project-card--demo scroll-reveal" tabindex="0"
+                 data-demo="assets/demos/outrun.webp"
+                 aria-label="OutRun — jogo em desenvolvimento. Passe o mouse, toque ou use o foco do teclado para ver a demonstração.">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="project-image demo-stage">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-poster" src="assets/demos/outrun-poster.jpg" alt="Prévia do OutRun: uma Ferrari vermelha em uma estrada com palmeiras, curvas e outros carros" width="480" height="320" loading="lazy" decoding="async"/>
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
+            <img class="demo-anim" alt="" aria-hidden="true" width="480" height="320" decoding="async"/>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="demo-live" aria-hidden="true"><span class="demo-dot"></span> Demo</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="demo-hint" aria-hidden="true">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fas fa-play"></i>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-hover">Passe o mouse</span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+              <span class="hint-touch">Toque para ver</span>
+            </div>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="project-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>OutRun</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <p>Corrida arcade em pseudo-3D no estilo dos clássicos de fliperama. Pilote por estradas com curvas e ladeiras, desvie do tráfego e acompanhe tempo, pontuação, volta e velocímetro no painel retrô.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="project-features">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-road"></i> Pseudo-3D</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-flag-checkered"></i> Contra o relógio</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <span><i class="fas fa-gauge-high"></i> Painel arcade</span>
+            </div>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="project-status project-status--inline status-dev"><span class="status-dot" aria-hidden="true"></span>Em Desenvolvimento</span>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+            <a href="https://github.com/soareslfsantosc-cyber/outrun-game" class="btn-project" target="_blank" rel="noopener">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+              <i class="fab fa-github"></i> Ver repositório no GitHub
+            </a>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- ===== GAMES SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section id="jogos" class="games scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">Jogos Disponíveis</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
         <p class="section-subtitle">Experimente nossos jogos desenvolvidos com paixão e criatividade</p>
       </div>
-      <div class="games-grid single-game">
+      <!-- Grade responsiva com os três jogos locais disponíveis para jogar. -->
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+      <div class="games-grid">
 
+        <!-- Jogo da memória: versão atualizada substituída pelos arquivos recebidos. -->
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="game-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="game-image">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="game-thumbnail game-thumb-1">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
               <i class="fas fa-brain"></i>
             </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="game-badge badge-available">Disponível</div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="game-overlay">
-              <a href="games/memoria/index.html" class="btn btn-primary" target="_blank">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+              <a href="games/memoria/index.html" class="btn btn-primary" target="_blank" rel="noopener">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
                 <i class="fas fa-play"></i> Jogar Agora
               </a>
             </div>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="game-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <h3>Jogo da Memória</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
             <p class="game-subtitle">Personagens Históricos</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <p>Jogo clássico de memória com toque educativo. Descubra e combine pares de personagens históricos enquanto aprende sobre suas contribuições para a humanidade.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="game-features">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span><i class="fas fa-graduation-cap"></i> Educativo</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span><i class="fas fa-brain"></i> Memória</span>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span><i class="fas fa-history"></i> Histórico</span>
             </div>
           </div>
         </div>
+
+        <!-- Jogo de tênis integrado a partir do pacote MATCH POINT enviado. -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="game-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="game-image">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-thumbnail game-thumb-1" aria-hidden="true"><i class="fas fa-table-tennis-paddle-ball"></i></div>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="game-badge badge-available">Disponível</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-overlay"><a href="games/tennis/index.html" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-play"></i> Jogar Agora</a></div>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="game-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Ping Pong</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="game-subtitle">Tênis arcade retrô</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <p>Entre em quadra nesta partida de tênis em estilo pixel art. Jogue diretamente no navegador com controles arcade.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-features"><span><i class="fas fa-table-tennis-paddle-ball"></i> Tênis</span><span><i class="fas fa-gamepad"></i> Arcade</span><span><i class="fas fa-palette"></i> 8-bit</span></div>
+          </div>
+        </article>
+
+        <!-- Jogo de luta local com sua própria pasta de imagens, scripts e estilos. -->
+  <!-- Unidade de conteúdo independente, como um cartão de membro ou projeto. -->
+        <article class="game-card scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="game-image">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-thumbnail game-thumb-1" aria-hidden="true"><i class="fas fa-khanda"></i></div>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
+            <span class="game-badge badge-available">Disponível</span>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-overlay"><a href="games/lost-deity/index.html" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-play"></i> Jogar Agora</a></div>
+          </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+          <div class="game-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <h3>Lost Deity</h3>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
+            <p class="game-subtitle">Combate e seleção de personagens</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+            <p>Escolha os lutadores e enfrente uma batalha arcade com personagens, cenários e efeitos visuais próprios.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="game-features"><span><i class="fas fa-fist-raised"></i> Luta</span><span><i class="fas fa-users"></i> 2 jogadores</span><span><i class="fas fa-bolt"></i> Ação</span></div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- ===== SERVICES SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section id="servicos" class="services scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">Nossos Serviços</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="services-grid">
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-gamepad"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Desenvolvimento de Jogos</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Criação completa de jogos indie com foco em narrativa, atmosfera e jogabilidade inovadora. Especializados em Metroidvania e FPS.</p>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-magic"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Gamificação</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Transformamos experiências comuns em aventuras envolventes através de elementos de jogos aplicados a diferentes contextos.</p>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-music"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Trilhas Sonoras</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Composição e produção de trilhas sonoras imersivas que complementam perfeitamente a atmosfera dos seus projetos.</p>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-vr-cardboard"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Realidade Virtual</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Desenvolvimento de experiências em VR que transportam os usuários para mundos completamente novos e interativos.</p>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-tools"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Suporte Técnico</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Parceria com Gigabyte oferecendo suporte técnico especializado, atualizações de software e manutenção de PCs e notebooks.</p>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="service-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="service-icon">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-laptop"></i>
           </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Consultoria Gaming</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Consultoria especializada em hardware gaming, otimização de performance e configuração de setups profissionais.</p>
         </div>
 
@@ -341,141 +815,245 @@
   </section>
 
   <!-- ===== TESTIMONIALS SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section class="testimonials scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">O Que Dizem Sobre Nós</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="testimonials-slider">
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="testimonial-card active">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <p>"A XBYTE criou uma experiência única para nosso projeto. A atenção aos detalhes e a paixão pelo que fazem é evidente em cada aspecto do trabalho."</p>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-author">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-avatar"><i class="fas fa-user"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <h4>Maria Silva</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span>CEO, TechStart</span>
             </div>
           </div>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="testimonial-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <p>"O suporte técnico da XBYTE é excepcional. Resolveram todos os nossos problemas de hardware gaming com profissionalismo e rapidez."</p>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-author">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-avatar"><i class="fas fa-user"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <h4>João Santos</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span>Streamer Profissional</span>
             </div>
           </div>
         </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="testimonial-card">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-content">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <p>"A trilha sonora criada pela XBYTE elevou nosso projeto a um nível completamente novo. Simplesmente incrível!"</p>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="testimonial-author">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-avatar"><i class="fas fa-user"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="author-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <h4>Ana Costa</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span>Diretora Criativa</span>
             </div>
           </div>
         </div>
 
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="testimonial-dots">
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="dot active" data-slide="0"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="dot" data-slide="1"></span>
+  <!-- Trecho em linha usado para estilização ou conteúdo auxiliar. -->
         <span class="dot" data-slide="2"></span>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTACT SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section id="contato" class="contact scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">Entre em Contato</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="contact-content">
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="contact-info">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <h3>Vamos Criar Algo Incrível Juntos</h3>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <p>Pronto para transformar sua ideia em realidade? Entre em contato e vamos discutir como podemos ajudar seu projeto a alcançar o próximo nível.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="contact-details">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="contact-item">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
               <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
               <div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
                 <h4>Email</h4>
-                <p>contato@xbytegamesstudios.com</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+                <p><a href="mailto:xbytestudiosoficial@gmail.com" class="contact-link">xbytestudiosoficial@gmail.com</a></p>
               </div>
             </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="contact-item">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
               <div class="contact-icon"><i class="fas fa-phone"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
               <div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
                 <h4>Telefone</h4>
-                <p>(21) 96450-8776</p>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+                <p><a href="tel:+5521976607480" class="contact-link">(21) 97660-7480</a></p>
               </div>
             </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
               <div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+                <h4>GitHub</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+                <p><a href="https://github.com/xbytestudiosoficial-hub" target="_blank" rel="noopener" class="contact-link">github.com/xbytestudiosoficial-hub</a></p>
+              </div>
+            </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+            <div class="contact-item">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
+              <div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
                 <h4>Localização</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
                 <p>Rio de Janeiro, RJ, Brasil</p>
               </div>
             </div>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="social-links">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
             <a href="https://instagram.com/XBYTE.Games" target="_blank" aria-label="Instagram" class="social-link">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
               <i class="fab fa-instagram"></i>
             </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
             <a href="https://twitter.com/XBYTEStudios" target="_blank" aria-label="Twitter" class="social-link">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
               <i class="fab fa-twitter"></i>
             </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
             <a href="https://linkedin.com/company/XBYTE.studiios" target="_blank" aria-label="LinkedIn" class="social-link">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/XBYTEStudios" target="_blank" aria-label="GitHub" class="social-link">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+            <a href="https://github.com/xbytestudiosoficial-hub" target="_blank" aria-label="GitHub" class="social-link">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
               <i class="fab fa-github"></i>
             </a>
           </div>
         </div>
 
+  <!-- Agrupa campos e controles enviados como um formulário. -->
         <form class="contact-form" id="contact-form">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="form-group">
+  <!-- Rótulo associado a um campo de formulário. -->
             <label for="nome">Nome Completo</label>
+  <!-- Campo de entrada de dados do formulário. -->
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required/>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="form-group">
+  <!-- Rótulo associado a um campo de formulário. -->
             <label for="email">Email</label>
+  <!-- Campo de entrada de dados do formulário. -->
             <input type="email" id="email" name="email" placeholder="seu@email.com" required/>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="form-group">
+  <!-- Rótulo associado a um campo de formulário. -->
             <label for="assunto">Assunto</label>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <select id="assunto" name="assunto" required>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="">Selecione um assunto</option>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="desenvolvimento">Desenvolvimento de Jogos</option>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="suporte">Suporte Técnico</option>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="consultoria">Consultoria</option>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="parceria">Parceria</option>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <option value="outro">Outro</option>
             </select>
           </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="form-group">
+  <!-- Rótulo associado a um campo de formulário. -->
             <label for="mensagem">Mensagem</label>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-nos sobre seu projeto ou como podemos ajudar..."></textarea>
           </div>
+  <!-- Controle acionável pelo usuário. -->
           <button type="submit" class="btn btn-primary btn-full">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
             <i class="fas fa-paper-plane"></i>
             Enviar Mensagem
           </button>
@@ -486,24 +1064,39 @@
   </section>
 
   <!-- ===== REFERENCES SECTION ===== -->
+  <!-- Seção temática da página; seus identificadores também servem como destinos de navegação. -->
   <section class="references scroll-reveal">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="section-header">
+  <!-- Título de seção, com hierarquia semântica de nível dois. -->
         <h2 class="section-title">Referências do Setor</h2>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="section-divider"></div>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
         <p class="section-subtitle">Empresas que nos inspiram e com quem colaboramos</p>
       </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="references-grid">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="https://www.ubisoft.com" target="_blank" class="reference-link">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <span>Ubisoft</span><i class="fas fa-external-link-alt"></i>
         </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="https://www.epicgames.com" target="_blank" class="reference-link">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <span>Epic Games</span><i class="fas fa-external-link-alt"></i>
         </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="https://www.riotgames.com" target="_blank" class="reference-link">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <span>Riot Games</span><i class="fas fa-external-link-alt"></i>
         </a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
         <a href="https://www.gigabyte.com" target="_blank" class="reference-link">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
           <span>Gigabyte</span><i class="fas fa-external-link-alt"></i>
         </a>
       </div>
@@ -511,57 +1104,99 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
+  <!-- Rodapé com informações complementares e links do site. -->
   <footer class="footer">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="footer-top">
+  <!-- Superfície de desenho usada pelos efeitos gráficos renderizados por JavaScript. -->
       <canvas id="footer-particles-canvas" class="footer-particles-canvas" aria-hidden="true"></canvas>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="container">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
         <div class="footer-grid">
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="footer-brand">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="footer-logo">
+  <!-- Imagem com origem e texto alternativo para acessibilidade. -->
               <img src="assets/images/xbyte_logo.png" alt="XBYTE Logo" />
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <span>XBYTE Games Studios</span>
             </div>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <p>Criando experiências digitais que transcendem realidades desde 2019. Estúdio indie brasileiro apaixonado por jogos e tecnologia.</p>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
             <div class="footer-social">
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
               <a href="https://instagram.com/XBYTE.Games" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
               <a href="https://twitter.com/XBYTEStudios" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
               <a href="https://linkedin.com/company/XBYTE.studiios" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/XBYTEStudios" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+              <a href="https://github.com/xbytestudiosoficial-hub" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="footer-col">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <h4>Links Rápidos</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <ul>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+              <li><a href="#equipe"><i class="fas fa-chevron-right"></i> Equipe</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#projetos"><i class="fas fa-chevron-right"></i> Projetos</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#jogos"><i class="fas fa-chevron-right"></i> Jogos</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
             </ul>
           </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="footer-col">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <h4>Serviços</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <ul>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento de Jogos</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Suporte Técnico</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Consultoria Gaming</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Trilhas Sonoras</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Gamificação</a></li>
             </ul>
           </div>
 
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
           <div class="footer-col">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <h4>Contato</h4>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
             <ul class="footer-contact-list">
-              <li><i class="fas fa-envelope"></i> contato@xbytegamesstudios.com</li>
-              <li><i class="fas fa-phone"></i> (21) 96450-8776</li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+              <li><i class="fas fa-envelope"></i> <a href="mailto:xbytestudiosoficial@gmail.com" class="footer-contact-link">xbytestudiosoficial@gmail.com</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
+              <li><i class="fas fa-phone"></i> <a href="tel:+5521976607480" class="footer-contact-link">(21) 97660-7480</a></li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ, Brasil</li>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
               <li>
-                <a href="https://github.com/XBYTEStudios" target="_blank" class="footer-github-link">
-                  <i class="fab fa-github"></i> github.com/XBYTEStudios
+  <!-- Link de navegação ou ação que leva ao destino indicado no atributo href. -->
+                <a href="https://github.com/xbytestudiosoficial-hub" target="_blank" rel="noopener" class="footer-github-link">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
+                  <i class="fab fa-github"></i> github.com/xbytestudiosoficial-hub
                 </a>
               </li>
             </ul>
@@ -570,25 +1205,36 @@
         </div>
       </div>
     </div>
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
     <div class="footer-bottom">
+  <!-- Contêiner usado para agrupar elementos relacionados e aplicar layout/estilo. -->
       <div class="container">
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
         <p>&copy; 2026 XBYTE Games Studios. Todos os direitos reservados.</p>
+  <!-- Parágrafo de texto descritivo apresentado ao visitante. -->
         <p class="footer-credits">Desenvolvido com <i class="fas fa-heart" style="color: #1a6bff;"></i> em Rio de Janeiro</p>
       </div>
     </div>
   </footer>
 
   <!-- ===== BACK TO TOP ===== -->
+  <!-- Controle acionável pelo usuário. -->
   <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+  <!-- Elemento de ícone; as classes definem o glifo da biblioteca de ícones. -->
     <i class="fas fa-chevron-up"></i>
   </button>
 
   <!-- ===== VISUAL FX LIBRARIES ===== -->
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
+  <!-- Elemento de interface que compõe a estrutura semântica e visual desta página. -->
   <script src="script.js"></script>
 </body>
 </html>

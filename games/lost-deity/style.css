@@ -1,0 +1,1171 @@
+/* ================================
+   RESET & BASE STYLES
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+* {
+/* Comentário: define a propriedade CSS margin para a regra atual. */
+  margin: 0;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 0;
+/* Comentário: define a propriedade CSS box-sizing para a regra atual. */
+  box-sizing: border-box;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+html, body {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: #1a1a1a;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+body {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Arial', sans-serif;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+  overflow: hidden;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.stat-label,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.timer,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.player-name,
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.enemy-name,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#displayText {
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: white;
+/* Comentário: define a propriedade CSS text-transform para a regra atual. */
+  text-transform: uppercase;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   GAME CONTAINER
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.game-container {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: inline-block;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: #0a0a0a;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.canvas-wrapper {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: inline-block;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 1024px;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 576px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#gameCanvas {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: block;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   HUD SUPERIOR
+   ================================ */
+
+/* .hud original removida para usar a versão com z-index corrigido no final */
+
+/* ================================
+   PLAYER STATS (Esquerda/Direita)
+   ================================ */
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.player-stats,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.enemy-stats {
+/* Comentário: define a propriedade CSS flex para a regra atual. */
+  flex: 1;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS flex-direction para a regra atual. */
+  flex-direction: column;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 8px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stat-label {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 12px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #fff;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.player-name,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.enemy-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 14px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #818cf8;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Health Bar */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.health-bar-container {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 30px;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 4px solid white;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: transparent;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.player-stats .health-bar-container {
+/* Comentário: define a propriedade CSS border-top para a regra atual. */
+  border-top: 4px solid white;
+/* Comentário: define a propriedade CSS border-left para a regra atual. */
+  border-left: 4px solid white;
+/* Comentário: define a propriedade CSS border-bottom para a regra atual. */
+  border-bottom: 4px solid white;
+/* Comentário: define a propriedade CSS border-right para a regra atual. */
+  border-right: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.enemy-stats .health-bar-container {
+/* Comentário: define a propriedade CSS border-top para a regra atual. */
+  border-top: 4px solid white;
+/* Comentário: define a propriedade CSS border-right para a regra atual. */
+  border-right: 4px solid white;
+/* Comentário: define a propriedade CSS border-bottom para a regra atual. */
+  border-bottom: 4px solid white;
+/* Comentário: define a propriedade CSS border-left para a regra atual. */
+  border-left: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.health-bar-bg {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS right para a regra atual. */
+  right: 0;
+/* Comentário: define a propriedade CSS bottom para a regra atual. */
+  bottom: 0;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: #4a4a4a;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 1;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.health-bar-fill {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS bottom para a regra atual. */
+  bottom: 0;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: #818cf8;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: width 0.3s ease-out;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 2;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.enemy-stats .health-bar-fill {
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   TIMER CENTRAL
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#timer {
+/* Comentário: define a propriedade CSS flex-shrink para a regra atual. */
+  flex-shrink: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100px;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 50px;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: #000;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 4px solid white;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 20px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   WINNER DISPLAY
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#displayText {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS right para a regra atual. */
+  right: 0;
+/* Comentário: define a propriedade CSS bottom para a regra atual. */
+  bottom: 0;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: none;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS background-color para a regra atual. */
+  background-color: rgba(0, 0, 0, 0.7);
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 48px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 2px;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 300; /* Aumentado */
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#displayText.show {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS animation para a regra atual. */
+  animation: fadeIn 0.5s ease-out;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   ANIMATIONS
+   ================================ */
+
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@keyframes fadeIn {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  from {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
+    opacity: 0;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+    transform: scale(0.8);
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  to {
+/* Comentário: define a propriedade CSS opacity para a regra atual. */
+    opacity: 1;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+    transform: scale(1);
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   RESPONSIVE (FUTURO)
+   ================================ */
+
+/* Comentário: define uma regra CSS condicional ou de configuração. */
+@media (max-width: 1024px) {
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  .canvas-wrapper {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+    width: 100vw;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+    height: 56.25vw;
+/* Comentário: define a propriedade CSS max-height para a regra atual. */
+    max-height: 100vh;
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  .hud {
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+    padding: 15px;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+    gap: 15px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  .stat-label {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+    font-size: 10px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+  .player-name,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  .enemy-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+    font-size: 12px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+  #timer {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+    width: 80px;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+    height: 40px;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+    font-size: 16px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+  }
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Novas Barras HUD */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.secondary-bars {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS flex-direction para a regra atual. */
+  flex-direction: column;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 4px;
+/* Comentário: define a propriedade CSS margin-top para a regra atual. */
+  margin-top: 4px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.defense-bar-container, .power-bar-container {
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 8px;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: rgba(0, 0, 0, 0.5);
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 1px solid #333;
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+  overflow: hidden;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.defense-bar-fill {
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #3498db;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: width 0.3s ease-out;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.power-bar-fill {
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 0%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #f1c40f;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: width 0.3s ease-out;
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+  box-shadow: 0 0 5px #f1c40f;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.enemy-stats .defense-bar-fill,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.enemy-stats .power-bar-fill {
+/* Comentário: define a propriedade CSS float para a regra atual. */
+  float: right;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Sistema de Rounds */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.announcement {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 50%;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 50%;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+  transform: translate(-50%, -50%) scale(0);
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 80px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #fff;
+/* Comentário: define a propriedade CSS text-shadow para a regra atual. */
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 4px 4px 0 #000;
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+  pointer-events: none;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 200; /* Aumentado */
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* Comentário: define a propriedade CSS text-transform para a regra atual. */
+  text-transform: uppercase;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.announcement.show {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+  transform: translate(-50%, -50%) scale(1);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   STAGE SELECTION MENU
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-select-overlay {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: rgba(0, 0, 0, 0.9);
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 1000;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: white;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-content {
+/* Comentário: define a propriedade CSS text-align para a regra atual. */
+  text-align: center;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 80%;
+/* Comentário: define a propriedade CSS max-width para a regra atual. */
+  max-width: 800px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-content h1 {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 48px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 30px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #818cf8;
+/* Comentário: define a propriedade CSS text-shadow para a regra atual. */
+  text-shadow: 0 0 15px rgba(129, 140, 248, 0.5);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-list-container h3 {
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 20px;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 2px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-grid {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: grid;
+/* Comentário: define a propriedade CSS grid-template-columns para a regra atual. */
+  grid-template-columns: repeat(3, 1fr);
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 15px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 30px;
+/* Comentário: define a propriedade CSS max-height para a regra atual. */
+  max-height: 300px;
+/* Comentário: define a propriedade CSS overflow-y para a regra atual. */
+  overflow-y: auto;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 10px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-card {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #222;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 2px solid #444;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 10px;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: pointer;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: all 0.2s ease;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-card:hover {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #333;
+/* Comentário: define a propriedade CSS border-color para a regra atual. */
+  border-color: #818cf8;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-card.selected {
+/* Comentário: define a propriedade CSS border-color para a regra atual. */
+  border-color: #818cf8;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #2d3154;
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.stage-card .stage-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 14px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-actions {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 20px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-btn {
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 12px 30px;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 18px;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: pointer;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: none;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: all 0.2s;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-btn.primary {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #818cf8;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: white;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-btn.primary:disabled {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #444;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: not-allowed;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-btn.secondary {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: transparent;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 2px solid #818cf8;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #818cf8;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.menu-btn:hover:not(:disabled) {
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+  transform: scale(1.05);
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.4);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   BLACK HOLE SPECIAL STAGE
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#blackHoleContainer {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 100%;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 1; /* Fundo */
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: none;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #000;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+#gameCanvas {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 5; /* Meio */
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: transparent;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.hud {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS right para a regra atual. */
+  right: 0;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 50; /* Topo */
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: flex-start;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 20px;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 20px;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* ================================
+   CHARACTER SELECT SCREEN
+   ================================ */
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-overlay {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 0;
+/* Comentário: define a propriedade CSS left para a regra atual. */
+  left: 0;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 1024px;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 576px;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a0a 100%);
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 2000;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+  overflow: hidden;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-overlay::before {
+/* Comentário: define a propriedade CSS content para a regra atual. */
+  content: '';
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS inset para a regra atual. */
+  inset: 0;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background:
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+    radial-gradient(circle at 20% 50%, rgba(129,140,248,0.08) 0%, transparent 50%),
+/* Comentário: completa uma declaração ou parte da lista de propriedades CSS. */
+    radial-gradient(circle at 80% 50%, rgba(255,100,100,0.08) 0%, transparent 50%);
+/* Comentário: define a propriedade CSS pointer-events para a regra atual. */
+  pointer-events: none;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-content {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS text-align para a regra atual. */
+  text-align: center;
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 20px 30px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-title {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 36px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #818cf8;
+/* Comentário: define a propriedade CSS text-shadow para a regra atual. */
+  text-shadow: 0 0 20px rgba(129,140,248,0.6);
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 4px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 6px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-phase {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 13px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #ffd700;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 3px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 16px;
+/* Comentário: define a propriedade CSS text-shadow para a regra atual. */
+  text-shadow: 0 0 8px rgba(255,215,0,0.4);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Chosen avatars row */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-row {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 30px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 18px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-box {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS flex-direction para a regra atual. */
+  flex-direction: column;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 4px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-avatar {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 64px;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 64px;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+  border-radius: 8px;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 28px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: white;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 2px solid #444;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #111;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: all 0.3s;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.p1-box .char-chosen-avatar { border-color: #818cf8; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.p2-box .char-chosen-avatar { border-color: #ff6464; }
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-label {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 10px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #888;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 2px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-name {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 12px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #fff;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS min-width para a regra atual. */
+  min-width: 80px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-chosen-vs {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 28px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #ffd700;
+/* Comentário: define a propriedade CSS text-shadow para a regra atual. */
+  text-shadow: 0 0 12px rgba(255,215,0,0.5);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Character grid */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-grid {
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS flex-wrap para a regra atual. */
+  flex-wrap: wrap;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS gap para a regra atual. */
+  gap: 16px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 14px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-card {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 130px;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: rgba(255,255,255,0.04);
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: 2px solid #333;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+  border-radius: 8px;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: pointer;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: all 0.2s ease;
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: relative;
+/* Comentário: define a propriedade CSS overflow para a regra atual. */
+  overflow: hidden;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.char-card:hover,
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-card.focused {
+/* Comentário: define a propriedade CSS border-color para a regra atual. */
+  border-color: #818cf8;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: rgba(129,140,248,0.12);
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+  transform: translateY(-3px);
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+  box-shadow: 0 6px 20px rgba(129,140,248,0.3);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-portrait {
+/* Comentário: define a propriedade CSS width para a regra atual. */
+  width: 100%;
+/* Comentário: define a propriedade CSS height para a regra atual. */
+  height: 90px;
+/* Comentário: define a propriedade CSS display para a regra atual. */
+  display: flex;
+/* Comentário: define a propriedade CSS align-items para a regra atual. */
+  align-items: center;
+/* Comentário: define a propriedade CSS justify-content para a regra atual. */
+  justify-content: center;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+  border-radius: 6px 6px 0 0;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-initial {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 42px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: rgba(255,255,255,0.7);
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-card-name {
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 8px 6px;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 12px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #ccc;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS text-align para a regra atual. */
+  text-align: center;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: define a propriedade CSS text-transform para a regra atual. */
+  text-transform: uppercase;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Player markers inside card */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.player-marker {
+/* Comentário: define a propriedade CSS position para a regra atual. */
+  position: absolute;
+/* Comentário: define a propriedade CSS top para a regra atual. */
+  top: 4px;
+/* Comentário: define a propriedade CSS right para a regra atual. */
+  right: 4px;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 9px;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 2px 5px;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+  border-radius: 3px;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS z-index para a regra atual. */
+  z-index: 10;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.p1-marker { background: #818cf8; color: #fff; }
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.p2-marker { background: #ff6464; color: #fff; }
+
+/* Hint */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-hint {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 10px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #555;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 14px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Confirm button */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-confirm-btn {
+/* Comentário: define a propriedade CSS padding para a regra atual. */
+  padding: 12px 40px;
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 16px;
+/* Comentário: define a propriedade CSS font-family para a regra atual. */
+  font-family: 'Courier New', monospace;
+/* Comentário: define a propriedade CSS font-weight para a regra atual. */
+  font-weight: bold;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 3px;
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #818cf8;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #fff;
+/* Comentário: define a propriedade CSS border para a regra atual. */
+  border: none;
+/* Comentário: define a propriedade CSS border-radius para a regra atual. */
+  border-radius: 4px;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: pointer;
+/* Comentário: define a propriedade CSS transition para a regra atual. */
+  transition: all 0.2s;
+/* Comentário: define a propriedade CSS text-transform para a regra atual. */
+  text-transform: uppercase;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-confirm-btn:disabled {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #333;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #666;
+/* Comentário: define a propriedade CSS cursor para a regra atual. */
+  cursor: not-allowed;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-confirm-btn:hover:not(:disabled) {
+/* Comentário: define a propriedade CSS background para a regra atual. */
+  background: #a5b4fc;
+/* Comentário: define a propriedade CSS transform para a regra atual. */
+  transform: scale(1.05);
+/* Comentário: define a propriedade CSS box-shadow para a regra atual. */
+  box-shadow: 0 0 20px rgba(129,140,248,0.5);
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+
+/* Legenda de controles na tela de selecao */
+/* Comentário: seleciona os elementos que recebem os estilos desta regra. */
+.char-select-controls {
+/* Comentário: define a propriedade CSS font-size para a regra atual. */
+  font-size: 11px;
+/* Comentário: define a propriedade CSS color para a regra atual. */
+  color: #9aa0c8;
+/* Comentário: define a propriedade CSS letter-spacing para a regra atual. */
+  letter-spacing: 1px;
+/* Comentário: define a propriedade CSS line-height para a regra atual. */
+  line-height: 1.7;
+/* Comentário: define a propriedade CSS margin-bottom para a regra atual. */
+  margin-bottom: 14px;
+/* Comentário: encerra a regra CSS iniciada acima. */
+}
+/* Comentário: continua o seletor ou valor da regra CSS atual. */
+.char-select-controls b { color: #ffd700; }

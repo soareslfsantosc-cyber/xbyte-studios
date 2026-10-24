@@ -10,6 +10,8 @@
 </head>
 
 <body>
+		<!-- Versão atualizada do jogo da memória fornecida para substituir a versão anterior. -->
+		<div class="stadium-bg" aria-hidden="true"><canvas id="stadium-canvas" width="900" height="520"></canvas></div>
 	<main>
 		<div class="game">
 			<h1 class="game-title">Personagens Históricos</h1>
@@ -23,6 +25,7 @@
 				<div class="info-content">
 					<button id="close-info" class="close-btn">&times;</button>
 					<h2 id="character-name" class="character-name"></h2>
+					<div class="type-line" aria-hidden="true"><span></span><i></i></div>
 					<p id="character-description" class="character-description"></p>
 				</div>
 			</div>
@@ -30,9 +33,11 @@
 		<div class="interface">
 			<div class="interface-data interface-data-tries">Tentativas: <span class="tries-value">0</span></div>
 			<div class="interface-data interface-data-best">Melhor: <span class="best-value">0</span></div>
-			<button id="reset-game" class="interface-btn">Novo Jogo</button>
+			<button id="show-ranking" class="interface-btn interface-btn-secondary">Ranking</button>
+				<button id="reset-game" class="interface-btn">Novo Jogo</button>
 		</div>
-	</main>
+	<section id="ranking-panel" class="ranking-panel" aria-hidden="true"><div class="ranking-head"><span>HALL DA FAMA</span><button id="close-ranking" class="ranking-close" aria-label="Fechar ranking">×</button></div><p class="ranking-subtitle">Melhores performances</p><ol id="ranking-list" class="ranking-list"></ol><p id="ranking-empty" class="ranking-empty">Complete uma partida para entrar no ranking.</p></section>
+</main>
 	<script src="./script.js"></script>
 
 </body>
